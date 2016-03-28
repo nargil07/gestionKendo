@@ -1,9 +1,11 @@
 from sqlalchemy.ext.declarative import declarative_base
-from sqlalchemy import ForeignKey, Column, Integer, String, DateTime,create_engine
+from sqlalchemy import ForeignKey, Column, Integer, String, DateTime, create_engine
 from sqlalchemy.orm import relationship
 
 Base = declarative_base()
 engine = create_engine('sqlite:///bd.db', echo=True)
+
+
 class Adherent(Base):
     __tablename__ = 'Adherents'
     licence = Column(Integer, primary_key=True)
@@ -14,8 +16,8 @@ class Adherent(Base):
     type = Column(String(50))
 
     __mapper_args__ = {
-        'polymorphic_identity' : 'Adherents',
-        'polymorphic_on' : type
+        'polymorphic_identity': 'Adherents',
+        'polymorphic_on': type
     }
 
     def __init__(self, licence, nom, prenom, dateNaissance):
@@ -25,12 +27,23 @@ class Adherent(Base):
         self.dateNaissance = dateNaissance
 
     def __str__(self):
-        return ("Adherent : [Licence : {}, nom : {}, prenom : {}, dateNaissance : {}]".format(self.licence, self.nom, self.prenom, self.dateNaissance))
+        return ("Adherent : [Licence : {}, nom : {}, prenom : {}, dateNaissance : {}]".format(self.licence, self.nom,
+                                                                                              self.prenom,
+                                                                                              self.dateNaissance))
+
+
+    def __repr__(self):
+        return (
+        "Adherent : [Licence : {}, nom : {}, prenom : {}, dateNaissance : {}]".format(self.licence, self.nom,
+                                                                                      self.prenom,
+                                                                                      self.dateNaissance))
+
 
 class Professeur(Adherent):
     __tablename__ = 'Professeurs'
     licence = Column(Integer, ForeignKey('Adherents.licence'), primary_key=True)
     diplomes = relationship("Diplome")
+
 
 class Grade(Base):
     __tablename__ = 'Grades'
@@ -44,5 +57,6 @@ class Diplome(Base):
     id = Column(Integer, primary_key=True)
     libelle = Column(String(50), nullable=False)
     idProfesseur = Column(Integer, ForeignKey('Professeurs.licence'))
+
 
 Base.metadata.create_all(engine)
