@@ -11,8 +11,10 @@ class AdherentsDAO(DAO):
         return adherents
 
     def insert(self, nom, prenom, dateNaissance):
-        adherent = Adherent()
-        pass
+        adherent = Adherent(nom, prenom, dateNaissance)
+        self.session.add(adherent)
+        self.session.commit()
+
     """
     Permet de recuperer un etudiant
     Si il ne trouve pas d'étudiant renvoie None

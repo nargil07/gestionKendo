@@ -1,6 +1,6 @@
 from kendoDAO.AbstractDAO import DAO
 from models import Grade
-from sqlalchemy import DateTime
+from datetime import date
 
 
 class GradesDAO(DAO):
@@ -16,6 +16,6 @@ class GradesDAO(DAO):
             grades.append(grade)
         return grades
     def insertGrade(self, libelle, idAdherent):
-        grade = Grade(libelle, idAdherent,DateTime())
+        grade = Grade(libelle, idAdherent, date.today())
         self.session.add(grade)
         self.session.commit()

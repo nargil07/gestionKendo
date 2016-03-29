@@ -8,7 +8,7 @@ class ServiceAdherent():
         self.adherentDAO = AdherentsDAO()
         self.gradeDAO = GradesDAO()
 
-    def ajouterDiplome(self, libelleDiplome):
-        self.gradeDAO.insertGrade(libelleDiplome, self.adherent.licence)
+    def ajouterGrade(self, libelleGrade):
+        self.gradeDAO.insertGrade(libelleGrade, self.adherent.licence)
 
 

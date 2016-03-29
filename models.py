@@ -40,13 +40,13 @@ class Adherent(Base):
 
 class Professeur(Adherent):
     __tablename__ = 'Professeurs'
-    licence = Column(Integer, ForeignKey('Adherents.licence'), primary_key=True)
+    licence = Column(Integer, ForeignKey('Adherents.licence'), primary_key=True, autoincrement=True)
     diplomes = relationship("Diplome")
 
 
 class Grade(Base):
     __tablename__ = 'Grades'
-    id = Column(Integer, primary_key=True)
+    id = Column(Integer, primary_key=True, autoincrement=True)
     libelle = Column(String(50), nullable=False)
     dateObtention = Column(DateTime, nullable=False)
     idAdherent = Column(Integer, ForeignKey('Adherents.licence'))
@@ -58,9 +58,15 @@ class Grade(Base):
 
 class Diplome(Base):
     __tablename__ = 'Diplomes'
-    id = Column(Integer, primary_key=True)
+    id = Column(Integer, primary_key=True, autoincrement=True)
     libelle = Column(String(50), nullable=False)
+    dateObtention = Column(DateTime, nullable=False)
     idProfesseur = Column(Integer, ForeignKey('Professeurs.licence'))
+
+    def __init__(self, libelle, idProfesseur, dateObtention):
+        self.libelle = libelle
+        self.idProfesseur = idProfesseur
+        self.dateObtention = dateObtention
 
 
 Base.metadata.create_all(engine)
