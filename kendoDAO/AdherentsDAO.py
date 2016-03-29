@@ -1,17 +1,22 @@
+# coding=utf-8
+from kendoDAO.AbstractDAO import DAO
 from models import Adherent
-from sqlalchemy.orm import sessionmaker
-from sqlalchemy import create_engine
-class AdherentsDAO():
-    def __init__(self):
-        self.session = None
-        try:
-            engine = create_engine('sqlite:///bd.db', echo=True)
-            Session = sessionmaker(bind=engine)
-            self.session = Session()
-        except Exception as err:
-            raise Exception(err.message)
+
+class AdherentsDAO(DAO):
+
     def findAll(self):
         adherents = []
         for adherent in self.session.query(Adherent):
             adherents.append(adherent)
         return adherents
+
+    def insert(self, nom, prenom, dateNaissance):
+        adherent = Adherent()
+        pass
+    """
+    Permet de recuperer un etudiant
+    Si il ne trouve pas d'étudiant renvoie None
+    Returns : Etudiant | None
+    """
+    def findById(self, id):
+        return self.session.query(Adherent).filter(Adherent.licence == id).one_or_none()

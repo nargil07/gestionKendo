@@ -1,7 +1,7 @@
 from kendoDAO.ProfesseursDAO import ProfesseursDAO
 
 
-class MetierProfesseurs():
+class GestionProfesseurs():
     def __init__(self):
         self.professeursDAO = ProfesseursDAO()
     def afficherProfesseurs(self):

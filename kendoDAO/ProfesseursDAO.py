@@ -1,15 +1,7 @@
+from kendoDAO.AbstractDAO import DAO
 from models import Professeur
-from sqlalchemy.orm import sessionmaker
-from sqlalchemy import create_engine
-class ProfesseursDAO():
-    def __init__(self):
-        self.session = None
-        try:
-            engine = create_engine('sqlite:///bd.db', echo=True)
-            Session = sessionmaker(bind=engine)
-            self.session = Session()
-        except Exception as err:
-            raise Exception(err.message)
+
+class ProfesseursDAO(DAO):
 
     def findAll(self):
         professeurs = []

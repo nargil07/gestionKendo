@@ -3,12 +3,12 @@ from sqlalchemy import ForeignKey, Column, Integer, String, DateTime, create_eng
 from sqlalchemy.orm import relationship
 
 Base = declarative_base()
-engine = create_engine('sqlite:///bd.db', echo=True)
+engine = create_engine('sqlite:///bd.db', echo=False)
 
 
 class Adherent(Base):
     __tablename__ = 'Adherents'
-    licence = Column(Integer, primary_key=True)
+    licence = Column(Integer, primary_key=True, autoincrement=True)
     nom = Column(String(50), nullable=False)
     prenom = Column(String(50), nullable=False)
     dateNaissance = Column(DateTime, nullable=False)
@@ -20,10 +20,9 @@ class Adherent(Base):
         'polymorphic_on': type
     }
 
-    def __init__(self, licence, nom, prenom, dateNaissance):
+    def __init__(self, nom, prenom, dateNaissance):
         self.nom = nom
         self.prenom = prenom
-        self.licence = licence
         self.dateNaissance = dateNaissance
 
     def __str__(self):
@@ -49,8 +48,13 @@ class Grade(Base):
     __tablename__ = 'Grades'
     id = Column(Integer, primary_key=True)
     libelle = Column(String(50), nullable=False)
+    dateObtention = Column(DateTime, nullable=False)
     idAdherent = Column(Integer, ForeignKey('Adherents.licence'))
 
+    def __init__(self, libelle, idAdherent, dateObtention):
+        self.libelle = libelle
+        self.idAdherent = idAdherent
+        self.dateObtention = dateObtention
 
 class Diplome(Base):
     __tablename__ = 'Diplomes'
