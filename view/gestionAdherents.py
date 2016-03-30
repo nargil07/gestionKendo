@@ -1,8 +1,6 @@
 from datetime import datetime
-
 from kendoDAO.AdherentsDAO import AdherentsDAO
 from service.ServiceAdherent import ServiceAdherent
-
 
 class GestionAdherent():
 
@@ -12,46 +10,65 @@ class GestionAdherent():
     def afficherAdherents(self):
         adherents = self.adherentsDAO.findAll()
         print("")
+        print("Liste des adherent : ")
         for adherent in adherents:
-            print("{} : {} {} ".format(adherent.licence, adherent.prenom, adherent.nom))
+            print("\t{} : {} {} ".format(adherent.licence, adherent.prenom, adherent.nom))
         print("")
 
     def afficherAjoutAdherent(self):
+        alive = True
         print("")
         nom = input("Nom : ")
         prenom = input("Prenom : ")
-        dateNaissance  = datetime.strptime(input("Date de naissance (JJ/MM/AAA) : "), "%d/%m/%Y")
+        while alive:
+            try:
+                dateNaissance  = datetime.strptime(input("Date de naissance (JJ/MM/AAA) : "), "%d/%m/%Y")
+                alive = False
+            except ValueError:
+                print("Veuillez indiquer une date valide")
         print("")
         self.adherentsDAO.insert(nom, prenom, dateNaissance)
 
 
     def afficherGradeAdherents(self):
-        adherents = self.adherentsDAO.findAll()
-        print("")
-        print("De qui voulez vous voirs ses grades ? ")
-        for adherent in adherents:
-            print("{} : {} {} ".format(adherent.licence, adherent.prenom, adherent.nom))
-
-        choixLicence = int(input("Tapez son numero de licence : "))
-        adherent = self.adherentsDAO.findById(choixLicence)
-        print("")
-        if(adherent is not None):
-            for grade in adherent.grades:
-                print("{} obtenu le {}".format(grade.libelle, grade.dateObtention))
-        print("")
+        alive = True
+        while (alive):
+            adherent = self.selectionAdherent()
+            print("")
+            if(adherent is not None):
+                alive = False
+                for grade in adherent.grades:
+                    print("{} obtenu le {} - {}".format(grade.libelle, grade.dateObtention, adherent.nom))
+            else:
+                print("Licence inconnu")
+            print("")
 
     def afficherAjoutGradeAdherents(self):
+
+        alive = True
+        while(alive):
+            adherent = self.selectionAdherent()
+            if (adherent is not None):
+                serviceAdherent = ServiceAdherent(adherent)
+                libelleGrade = input("nom du grade : ")
+                serviceAdherent.ajouterGrade(libelleGrade)
+                alive = False
+            else:
+                print("Licence inconnu ....")
+            print("")
+
+    def selectionAdherent(self):
         adherents = self.adherentsDAO.findAll()
         print("")
-        print("De qui voulez vous donner un grade ? ")
+        print("Liste des adherents : ")
         for adherent in adherents:
-            print("{} : {} {} ".format(adherent.licence, adherent.prenom, adherent.nom))
+            print("\t{} : {} {} ".format(adherent.licence, adherent.prenom, adherent.nom))
 
-        choixLicence = int(input("Tapez son numero de licence : "))
-        adherent = self.adherentsDAO.findById(choixLicence)
-        print("")
-        if (adherent is not None):
-            serviceAdherent = ServiceAdherent(adherent)
-            libelleGrade = input("nom du grade : ")
-            serviceAdherent.ajouterGrade(libelleGrade)
-        print("")
+        try:
+            choixLicence = int(input("Tapez son numero de licence : "))
+            adherent = self.adherentsDAO.findById(choixLicence)
+            print("")
+        except ValueError as valError:
+            adherent = None
+
+        return adherent

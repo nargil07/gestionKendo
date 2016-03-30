@@ -23,15 +23,7 @@ class GestionProfesseurs():
         self.professeursDAO.insert(nom, prenom, dateNaissance)
 
     def afficherAjoutDiplome(self):
-        professeurs = self.professeursDAO.findAll()
-        print("")
-        print("A qui donner un diplome")
-        for professeur in professeurs:
-            print("{} : {} {} ".format(professeur.licence, professeur.prenom, professeur.nom))
-
-        choixLicence = int(input("Tapez son numero de licence : "))
-        professeur = self.professeursDAO.findById(choixLicence)
-        print("")
+        professeur = self.selectionProfesseur()
         if (professeur is not None):
             serviceProfesseur = ServiceProfesseur(professeur)
             libelleGrade = input("nom du diplome : ")
@@ -40,16 +32,19 @@ class GestionProfesseurs():
 
     def afficherDiplome(self):
 
-        professeurs = self.professeursDAO.findAll()
-        print("")
-        print("De qui voulez vous voir ses Diplomes ? ")
-        for professeur in professeurs:
-            print("{} : {} {} ".format(professeur.licence, professeur.prenom, professeur.nom))
-
-        choixLicence = int(input("Tapez son numero de licence : "))
-        professeur = self.professeursDAO.findById(choixLicence)
-        print("")
+        professeur = self.selectionProfesseur()
         if (professeur is not None):
             for diplome in professeur.diplomes:
                 print("{} obtenu le {}".format(diplome.libelle, diplome.dateObtention))
         print("")
+
+    def selectionProfesseur(self):
+        professeurs = self.professeursDAO.findAll()
+        print("")
+        print("Liste des professeurs")
+        for professeur in professeurs:
+            print("\t{} : {} {} ".format(professeur.licence, professeur.prenom, professeur.nom))
+        choixLicence = int(input("Tapez son numero de licence : "))
+        professeur = self.professeursDAO.findById(choixLicence)
+        print("")
+        return professeur

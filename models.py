@@ -5,7 +5,9 @@ from sqlalchemy.orm import relationship
 Base = declarative_base()
 engine = create_engine('sqlite:///bd.db', echo=False)
 
-
+"""
+Model Adherent representation d'un adherent
+"""
 class Adherent(Base):
     __tablename__ = 'Adherents'
     licence = Column(Integer, primary_key=True, autoincrement=True)
@@ -37,13 +39,17 @@ class Adherent(Base):
                                                                                       self.prenom,
                                                                                       self.dateNaissance))
 
-
+"""
+Model Professeur herite d'un adherent
+"""
 class Professeur(Adherent):
     __tablename__ = 'Professeurs'
     licence = Column(Integer, ForeignKey('Adherents.licence'), primary_key=True, autoincrement=True)
     diplomes = relationship("Diplome")
 
-
+"""
+Model Grade - representation d'un grade
+"""
 class Grade(Base):
     __tablename__ = 'Grades'
     id = Column(Integer, primary_key=True, autoincrement=True)
@@ -56,6 +62,9 @@ class Grade(Base):
         self.idAdherent = idAdherent
         self.dateObtention = dateObtention
 
+"""
+Model Diplome - representation d'un diplome
+"""
 class Diplome(Base):
     __tablename__ = 'Diplomes'
     id = Column(Integer, primary_key=True, autoincrement=True)
