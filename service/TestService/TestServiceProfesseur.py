@@ -1,10 +1,10 @@
 import unittest
 
-from models import Adherent
-from service.ServiceAdherent import ServiceProfesseur
+from models import Professeur
+from service.ServiceProfesseur import ServiceProfesseur
 
 
-class TestServiceAdherent(unittest.TestCase):
+class TestServiceProfesseur(unittest.TestCase):
 
     def test_HasDoc(self):
         self.assertLess(10, len(ServiceProfesseur.__doc__))
@@ -13,7 +13,7 @@ class TestServiceAdherent(unittest.TestCase):
         self.assertRaises(AttributeError, ServiceProfesseur, None)
         self.assertRaises(AttributeError, ServiceProfesseur, 1)
         self.assertRaises(AttributeError, ServiceProfesseur, "")
-        self.assertIsNotNone(ServiceProfesseur(Adherent("test", "test", "test")))
+        self.assertIsNotNone(ServiceProfesseur(Professeur("test", "test", "test")))
 
 
 if __name__ == '__main__':

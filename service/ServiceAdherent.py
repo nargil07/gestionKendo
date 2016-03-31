@@ -1,11 +1,12 @@
 from kendoDAO.AdherentsDAO import AdherentsDAO
 from kendoDAO.GradesDAO import GradesDAO
+from models import Adherent
 
 """
 Cette classe a pour utilité de gerer un adherent.
 Il s'occupe de la communication avec les dao
 """
-class ServiceAdherent():
+class ServiceProfesseur():
     """
     constructeur
     """
@@ -14,6 +15,8 @@ class ServiceAdherent():
         self.adherentDAO = AdherentsDAO()
         self.gradeDAO = GradesDAO()
         if self.adherent is None:
+            raise AttributeError("Le service Adherent à besoin d'un objet Adherent")
+        elif type(adherent) is not Adherent:
             raise AttributeError("Le service Adherent à besoin d'un objet Adherent")
 
 

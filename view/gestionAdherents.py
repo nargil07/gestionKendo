@@ -1,6 +1,6 @@
 from datetime import datetime
 from kendoDAO.AdherentsDAO import AdherentsDAO
-from service.ServiceAdherent import ServiceAdherent
+from service.ServiceAdherent import ServiceProfesseur
 
 class GestionAdherent():
 
@@ -49,7 +49,7 @@ class GestionAdherent():
         while(alive):
             adherent = self.selectionAdherent()
             if (adherent is not None):
-                serviceAdherent = ServiceAdherent(adherent)
+                serviceAdherent = ServiceProfesseur(adherent)
                 libelleGrade = input("nom du grade : ")
                 serviceAdherent.ajouterGrade(libelleGrade)
                 alive = False

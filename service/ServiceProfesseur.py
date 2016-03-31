@@ -1,5 +1,6 @@
 from kendoDAO.DiplomesDAO import DiplomesDAO
 from kendoDAO.ProfesseursDAO import ProfesseursDAO
+from models import Professeur
 
 """
 Cette classe a pour utilité la gestion d'un professeur
@@ -14,6 +15,8 @@ class ServiceProfesseur():
         self.professeurDAO = ProfesseursDAO()
         self.diplomesDAO = DiplomesDAO()
         if(self.professeur is None):
+            raise AttributeError("Le service professeur à besoin d'un objet Professeur")
+        elif type(professeur) is not Professeur:
             raise AttributeError("Le service professeur à besoin d'un objet Professeur")
 
     """

@@ -26,9 +26,7 @@ class Menu:
         while not fini:
             self.afficher()
             try:
-
                 choix = int(input("Votre choix ? : "))
-
                 if choix == 1:
                     self.gestionAdherents.afficherAdherents()
                 elif choix == 2:
