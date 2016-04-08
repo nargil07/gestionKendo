@@ -1,11 +1,14 @@
 # -*-coding:UTF-8 -*
+from datetime import datetime
 
-from view.gestionAdherents import GestionAdherent
-from view.gestionProfesseurs import GestionProfesseurs
+from modeconsole.view.gestionProfesseurs import GestionProfesseurs
+
+from kendoDAO.AdherentsDAO import AdherentsDAO
+from kendoDAO.ProfesseursDAO import ProfesseursDAO
+from modeconsole.view.gestionAdherents import GestionAdherent
 
 
 class Menu:
-
     def __init__(self):
         self.gestionAdherents = GestionAdherent()
         self.gestionProfesseurs = GestionProfesseurs()
@@ -20,6 +23,7 @@ class Menu:
         print("6 : Ajouter un professeur")
         print("7 : Ajouter un grade à un adherent")
         print("8 : Ajouter un diplome à un professeur")
+        print("9 : Ajouter a partir du csv test.csv")
 
     def run(self):
         fini = False
@@ -43,11 +47,47 @@ class Menu:
                     self.gestionAdherents.afficherAjoutGradeAdherents()
                 elif choix == 8:
                     self.gestionProfesseurs.afficherAjoutDiplome()
+                elif choix == 9:
+                    adherentDAO = AdherentsDAO()
+                    professeurDAO = ProfesseursDAO()
+                    try:
+                        path = "test.csv"
+                    except KeyboardInterrupt:
+                        pass
+                    except EOFError:
+                        pass
+                    else:
+                        try:
+                            f = open(path, "r")
+                        except IOError:
+                            print("Impossible d'ouvrir le fichier ", path)
+                        line = f.readline()
+                        while (line != "" and line != "\n"):
+                            data = line.split(",")
+                            try:
+                                adherentDAO.insertWithLicence(data[0], data[1], data[2], datetime.strptime(data[3].rstrip(), "%d/%m/%Y"))
+                                line = f.readline()
+                            except ValueError as val:
+                                print("Impossible d'ouvrir le fichier ", path, val)
+                                line = ""
+                        line = f.readline()
+                        while (line != "" and line != "\n"):
+                            data = line.split(",")
+                            try:
+                                professeurDAO.insertWithLicence(data[0], data[1], data[2], datetime.strptime(data[3].rstrip(), "%d/%m/%Y"))
+                                line = f.readline()
+                            except ValueError:
+                                print("Impossible d'ouvrir le fichier ", path)
+                                line = ""
+
+
+                        f.close()
                 else:
                     fini = True
             except ValueError as valueError:
                 print("Mauvais choix ....")
                 print("")
+
             except KeyboardInterrupt:
                 try:
                     print("")
@@ -55,10 +95,9 @@ class Menu:
                 except KeyboardInterrupt:
                     fini = True
 
-        print("")
-        print("Merci d'avoir utiliser mon logiciel.")
 
-
+print("")
+print("Merci d'avoir utiliser mon logiciel.")
 
 if __name__ == "__main__":
     menu = Menu()

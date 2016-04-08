@@ -19,6 +19,11 @@ class AdherentsDAO(DAO):
             adherents.append(adherent)
         return adherents
 
+    def insertWithLicence(self, licence, nom, prenom, dateNaissance):
+        adherent = Adherent(nom, prenom, dateNaissance, licence)
+        self.session.add(adherent)
+        self.session.commit()
+
     def insert(self, nom, prenom, dateNaissance):
         """
         Permet d'inserer un étudiant en base

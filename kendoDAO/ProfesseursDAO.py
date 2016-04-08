@@ -16,3 +16,8 @@ class ProfesseursDAO(DAO):
         professeur = Professeur(nom, prenom, dateNaissance)
         self.session.add(professeur)
         self.session.commit()
+
+    def insertWithLicence(self, licence, nom, prenom, dateNaissance):
+        professeur = Professeur(nom, prenom, dateNaissance, licence)
+        self.session.add(professeur)
+        self.session.commit()
