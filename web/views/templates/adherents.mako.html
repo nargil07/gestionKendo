@@ -1,0 +1,29 @@
+<%inherit file="base.mako.html" />
+<%block name="container">
+<div class="row">
+    <div class="col-lg-12">
+        <div class="col-lg-2"></div>
+        <div class="col-lg-8">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    Les adherents
+                </div>
+                <div class="panel-body">
+                    <div class="row">
+                        <table>
+                            %for adherent in adherents:
+                            <tr>
+                                <td>${adherent.nom}</td>
+                                <td>${adherent.prenom}</td>
+                                <td>${adherent.dateNaissance}</td>
+                            </tr>
+                            %endfor
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-2"></div>
+    </div>
+</div>
+</%block>
