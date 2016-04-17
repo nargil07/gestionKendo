@@ -6,7 +6,7 @@ from models import Adherent
 Cette classe a pour utilité de gerer un adherent.
 Il s'occupe de la communication avec les dao
 """
-class ServiceProfesseur():
+class ServiceAdherent():
     """
     constructeur
     """

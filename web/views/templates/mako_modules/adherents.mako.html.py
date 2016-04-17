@@ -5,7 +5,7 @@ STOP_RENDERING = runtime.STOP_RENDERING
 __M_dict_builtin = dict
 __M_locals_builtin = locals
 _magic_number = 10
-_modified_time = 1460304692.8684814
+_modified_time = 1460891155.5432985
 _enable_loop = True
 _template_filename = '/home/antony/Documents/python/gestionKendo/web/views/templates/adherents.mako.html'
 _template_uri = 'adherents.mako.html'
@@ -49,16 +49,18 @@ def render_container(context,**pageargs):
             return render_container(context)
         adherents = context.get('adherents', UNDEFINED)
         __M_writer = context.writer()
-        __M_writer('\n<div class="row">\n    <div class="col-lg-12">\n        <div class="col-lg-2"></div>\n        <div class="col-lg-8">\n            <div class="panel panel-default">\n                <div class="panel-heading">\n                    Les adherents\n                </div>\n                <div class="panel-body">\n                    <div class="row">\n                        <table>\n')
+        __M_writer('\n<div class="row">\n    <div class="col-lg-12">\n        <div class="col-lg-2"></div>\n        <div class="col-lg-8">\n            <div class="panel panel-default">\n                <div class="panel-heading">\n                    Les adherents\n                </div>\n                <div class="panel-body">\n                    <table class="col-lg-12">\n                        <thead>\n                        <th>Nom</th>\n                        <th>Prenom</th>\n                        <th>Date de naissance</th>\n                        <th>Action</th>\n                        </thead>\n                        <tbody>\n')
         for adherent in adherents:
-            __M_writer('                            <tr>\n                                <td>')
+            __M_writer('                        <tr>\n                            <form action="details">\n                                <td>')
             __M_writer(str(adherent.nom))
             __M_writer('</td>\n                                <td>')
             __M_writer(str(adherent.prenom))
             __M_writer('</td>\n                                <td>')
             __M_writer(str(adherent.dateNaissance))
-            __M_writer('</td>\n                            </tr>\n')
-        __M_writer('                        </table>\n                    </div>\n                </div>\n            </div>\n        </div>\n        <div class="col-lg-2"></div>\n    </div>\n</div>\n')
+            __M_writer('</td>\n                                <td>\n                                    <input type="hidden" name="licence" value="')
+            __M_writer(str(adherent.licence))
+            __M_writer('">\n                                    <input type="submit" value="Afficher detail">\n                                </td>\n                            </form>\n                        </tr>\n')
+        __M_writer('                        </tbody>\n\n                    </table>\n                </div>\n            </div>\n        </div>\n        <div class="col-lg-2"></div>\n    </div>\n</div>\n')
         return ''
     finally:
         context.caller_stack._pop_frame()
@@ -66,6 +68,6 @@ def render_container(context,**pageargs):
 
 """
 __M_BEGIN_METADATA
-{"uri": "adherents.mako.html", "filename": "/home/antony/Documents/python/gestionKendo/web/views/templates/adherents.mako.html", "source_encoding": "ascii", "line_map": {"35": 1, "45": 2, "27": 0, "67": 61, "52": 2, "53": 14, "54": 15, "55": 16, "56": 16, "57": 17, "58": 17, "59": 18, "60": 18, "61": 21}}
+{"filename": "/home/antony/Documents/python/gestionKendo/web/views/templates/adherents.mako.html", "source_encoding": "ascii", "line_map": {"35": 1, "69": 63, "45": 2, "27": 0, "52": 2, "53": 20, "54": 21, "55": 23, "56": 23, "57": 24, "58": 24, "59": 25, "60": 25, "61": 27, "62": 27, "63": 33}, "uri": "adherents.mako.html"}
 __M_END_METADATA
 """

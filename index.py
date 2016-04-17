@@ -3,6 +3,7 @@ import os
 import cherrypy
 from mako.lookup import TemplateLookup
 from kendoDAO.AdherentsDAO import AdherentsDAO
+from service.ServiceAdherent import ServiceAdherent
 
 try:
     _curdir = os.path.join(os.getcwd(), os.path.dirname(os.path.abspath(__file__)))
@@ -23,13 +24,19 @@ mylookup = TemplateLookup(directories=[myTemplatesDir], module_directory=myModul
 #------------------------------------------------------------
 # Templates HTML
 #------------------------------------------------------------
-_page = mylookup.get_template("adherents.mako.html")
+_pageListAdherent = mylookup.get_template("adherents.mako.html")
+_pageDetailsAdherent = mylookup.get_template("details.adherent.mako.html")
 
 class HelloWorld(object):
     @cherrypy.expose
     def index(self):
         gestionadherent = AdherentsDAO()
-        return _page.render(adherents=gestionadherent.findAll())
+        return _pageListAdherent.render(adherents=gestionadherent.findAll())
+    @cherrypy.expose
+    def details(self, licence):
+        gestionadherent = AdherentsDAO()
+        serviceAdherent = ServiceAdherent(gestionadherent.findById(licence))
+        return _pageDetailsAdherent.render(adherent=serviceAdherent.adherent)
 
 if __name__ == '__main__':
 
