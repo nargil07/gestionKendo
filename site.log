@@ -800,3 +800,138 @@ TypeError: render_body() takes 1 positional argument but 2 were given
 [17/Apr/2016:14:11:18] ENGINE Bus EXITING
 [17/Apr/2016:14:11:18] ENGINE Bus EXITED
 [17/Apr/2016:14:11:18] ENGINE Waiting for child threads to terminate...
+[17/Apr/2016:14:46:36] ENGINE Listening for SIGHUP.
+[17/Apr/2016:14:46:36] ENGINE Listening for SIGTERM.
+[17/Apr/2016:14:46:36] ENGINE Listening for SIGUSR1.
+[17/Apr/2016:14:46:36] ENGINE Bus STARTING
+[17/Apr/2016:14:46:36] ENGINE Started monitor thread '_TimeoutMonitor'.
+[17/Apr/2016:14:46:36] ENGINE Serving on http://127.0.0.1:8080
+[17/Apr/2016:14:46:36] ENGINE Bus STARTED
+[17/Apr/2016:14:47:41] ENGINE Keyboard Interrupt: shutting down bus
+[17/Apr/2016:14:47:41] ENGINE Bus STOPPING
+[17/Apr/2016:14:47:41] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('127.0.0.1', 8080)) shut down
+[17/Apr/2016:14:47:41] ENGINE Stopped thread '_TimeoutMonitor'.
+[17/Apr/2016:14:47:41] ENGINE Bus STOPPED
+[17/Apr/2016:14:47:41] ENGINE Bus EXITING
+[17/Apr/2016:14:47:41] ENGINE Bus EXITED
+[17/Apr/2016:14:47:41] ENGINE Waiting for child threads to terminate...
+[17/Apr/2016:14:47:56] ENGINE Listening for SIGUSR1.
+[17/Apr/2016:14:47:56] ENGINE Listening for SIGHUP.
+[17/Apr/2016:14:47:56] ENGINE Listening for SIGTERM.
+[17/Apr/2016:14:47:56] ENGINE Bus STARTING
+[17/Apr/2016:14:47:56] ENGINE Started monitor thread '_TimeoutMonitor'.
+[17/Apr/2016:14:47:56] ENGINE Serving on http://127.0.0.1:8080
+[17/Apr/2016:14:47:56] ENGINE Bus STARTED
+[17/Apr/2016:14:48:04] ENGINE Keyboard Interrupt: shutting down bus
+[17/Apr/2016:14:48:04] ENGINE Bus STOPPING
+[17/Apr/2016:14:48:04] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('127.0.0.1', 8080)) shut down
+[17/Apr/2016:14:48:04] ENGINE Stopped thread '_TimeoutMonitor'.
+[17/Apr/2016:14:48:04] ENGINE Bus STOPPED
+[17/Apr/2016:14:48:04] ENGINE Bus EXITING
+[17/Apr/2016:14:48:04] ENGINE Bus EXITED
+[17/Apr/2016:14:48:04] ENGINE Waiting for child threads to terminate...
+[17/Apr/2016:14:48:09] ENGINE Listening for SIGHUP.
+[17/Apr/2016:14:48:09] ENGINE Listening for SIGUSR1.
+[17/Apr/2016:14:48:09] ENGINE Listening for SIGTERM.
+[17/Apr/2016:14:48:09] ENGINE Bus STARTING
+[17/Apr/2016:14:48:09] ENGINE Started monitor thread '_TimeoutMonitor'.
+[17/Apr/2016:14:48:09] ENGINE Serving on http://127.0.0.1:8080
+[17/Apr/2016:14:48:09] ENGINE Bus STARTED
+[17/Apr/2016:14:52:19] ENGINE Keyboard Interrupt: shutting down bus
+[17/Apr/2016:14:52:19] ENGINE Bus STOPPING
+[17/Apr/2016:14:52:19] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('127.0.0.1', 8080)) shut down
+[17/Apr/2016:14:52:19] ENGINE Stopped thread '_TimeoutMonitor'.
+[17/Apr/2016:14:52:19] ENGINE Bus STOPPED
+[17/Apr/2016:14:52:19] ENGINE Bus EXITING
+[17/Apr/2016:14:52:19] ENGINE Bus EXITED
+[17/Apr/2016:14:52:19] ENGINE Waiting for child threads to terminate...
+[17/Apr/2016:15:02:43] ENGINE Listening for SIGTERM.
+[17/Apr/2016:15:02:43] ENGINE Listening for SIGHUP.
+[17/Apr/2016:15:02:43] ENGINE Listening for SIGUSR1.
+[17/Apr/2016:15:02:43] ENGINE Bus STARTING
+[17/Apr/2016:15:02:43] ENGINE Started monitor thread '_TimeoutMonitor'.
+[17/Apr/2016:15:02:43] ENGINE Serving on http://127.0.0.1:8080
+[17/Apr/2016:15:02:43] ENGINE Bus STARTED
+[17/Apr/2016:15:03:45] ENGINE Keyboard Interrupt: shutting down bus
+[17/Apr/2016:15:03:45] ENGINE Bus STOPPING
+[17/Apr/2016:15:03:45] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('127.0.0.1', 8080)) shut down
+[17/Apr/2016:15:03:45] ENGINE Stopped thread '_TimeoutMonitor'.
+[17/Apr/2016:15:03:45] ENGINE Bus STOPPED
+[17/Apr/2016:15:03:45] ENGINE Bus EXITING
+[17/Apr/2016:15:03:45] ENGINE Bus EXITED
+[17/Apr/2016:15:03:45] ENGINE Waiting for child threads to terminate...
+[17/Apr/2016:15:31:57] ENGINE Listening for SIGTERM.
+[17/Apr/2016:15:31:57] ENGINE Listening for SIGHUP.
+[17/Apr/2016:15:31:57] ENGINE Listening for SIGUSR1.
+[17/Apr/2016:15:31:57] ENGINE Bus STARTING
+[17/Apr/2016:15:31:57] ENGINE Started monitor thread '_TimeoutMonitor'.
+[17/Apr/2016:15:31:57] ENGINE Serving on http://127.0.0.1:8080
+[17/Apr/2016:15:31:57] ENGINE Bus STARTED
+[17/Apr/2016:15:32:27] ENGINE Keyboard Interrupt: shutting down bus
+[17/Apr/2016:15:32:27] ENGINE Bus STOPPING
+[17/Apr/2016:15:32:27] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('127.0.0.1', 8080)) shut down
+[17/Apr/2016:15:32:27] ENGINE Stopped thread '_TimeoutMonitor'.
+[17/Apr/2016:15:32:27] ENGINE Bus STOPPED
+[17/Apr/2016:15:32:27] ENGINE Bus EXITING
+[17/Apr/2016:15:32:27] ENGINE Bus EXITED
+[17/Apr/2016:15:32:27] ENGINE Waiting for child threads to terminate...
+[20/Apr/2016:13:07:12] ENGINE Listening for SIGUSR1.
+[20/Apr/2016:13:07:12] ENGINE Listening for SIGTERM.
+[20/Apr/2016:13:07:12] ENGINE Listening for SIGHUP.
+[20/Apr/2016:13:07:12] ENGINE Bus STARTING
+[20/Apr/2016:13:07:12] ENGINE Started monitor thread '_TimeoutMonitor'.
+[20/Apr/2016:13:07:12] ENGINE Serving on http://127.0.0.1:8080
+[20/Apr/2016:13:07:12] ENGINE Bus STARTED
+[20/Apr/2016:13:08:02] ENGINE Keyboard Interrupt: shutting down bus
+[20/Apr/2016:13:08:02] ENGINE Bus STOPPING
+[20/Apr/2016:13:08:02] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('127.0.0.1', 8080)) shut down
+[20/Apr/2016:13:08:02] ENGINE Stopped thread '_TimeoutMonitor'.
+[20/Apr/2016:13:08:02] ENGINE Bus STOPPED
+[20/Apr/2016:13:08:02] ENGINE Bus EXITING
+[20/Apr/2016:13:08:02] ENGINE Bus EXITED
+[20/Apr/2016:13:08:02] ENGINE Waiting for child threads to terminate...
+[20/Apr/2016:13:08:05] ENGINE Listening for SIGTERM.
+[20/Apr/2016:13:08:05] ENGINE Listening for SIGHUP.
+[20/Apr/2016:13:08:05] ENGINE Listening for SIGUSR1.
+[20/Apr/2016:13:08:05] ENGINE Bus STARTING
+[20/Apr/2016:13:08:05] ENGINE Started monitor thread '_TimeoutMonitor'.
+[20/Apr/2016:13:08:05] ENGINE Serving on http://127.0.0.1:8080
+[20/Apr/2016:13:08:05] ENGINE Bus STARTED
+[20/Apr/2016:13:08:18] ENGINE Keyboard Interrupt: shutting down bus
+[20/Apr/2016:13:08:18] ENGINE Bus STOPPING
+[20/Apr/2016:13:08:19] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('127.0.0.1', 8080)) shut down
+[20/Apr/2016:13:08:19] ENGINE Stopped thread '_TimeoutMonitor'.
+[20/Apr/2016:13:08:19] ENGINE Bus STOPPED
+[20/Apr/2016:13:08:19] ENGINE Bus EXITING
+[20/Apr/2016:13:08:19] ENGINE Bus EXITED
+[20/Apr/2016:13:08:19] ENGINE Waiting for child threads to terminate...
+[20/Apr/2016:13:08:26] ENGINE Listening for SIGUSR1.
+[20/Apr/2016:13:08:26] ENGINE Listening for SIGTERM.
+[20/Apr/2016:13:08:26] ENGINE Listening for SIGHUP.
+[20/Apr/2016:13:08:26] ENGINE Bus STARTING
+[20/Apr/2016:13:08:26] ENGINE Started monitor thread '_TimeoutMonitor'.
+[20/Apr/2016:13:08:26] ENGINE Serving on http://127.0.0.1:8080
+[20/Apr/2016:13:08:26] ENGINE Bus STARTED
+[20/Apr/2016:13:11:04] ENGINE Keyboard Interrupt: shutting down bus
+[20/Apr/2016:13:11:04] ENGINE Bus STOPPING
+[20/Apr/2016:13:11:04] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('127.0.0.1', 8080)) shut down
+[20/Apr/2016:13:11:04] ENGINE Stopped thread '_TimeoutMonitor'.
+[20/Apr/2016:13:11:04] ENGINE Bus STOPPED
+[20/Apr/2016:13:11:04] ENGINE Bus EXITING
+[20/Apr/2016:13:11:04] ENGINE Bus EXITED
+[20/Apr/2016:13:11:04] ENGINE Waiting for child threads to terminate...
+[20/Apr/2016:13:11:05] ENGINE Listening for SIGUSR1.
+[20/Apr/2016:13:11:05] ENGINE Listening for SIGHUP.
+[20/Apr/2016:13:11:05] ENGINE Listening for SIGTERM.
+[20/Apr/2016:13:11:05] ENGINE Bus STARTING
+[20/Apr/2016:13:11:05] ENGINE Started monitor thread '_TimeoutMonitor'.
+[20/Apr/2016:13:11:05] ENGINE Serving on http://127.0.0.1:8080
+[20/Apr/2016:13:11:05] ENGINE Bus STARTED
+[20/Apr/2016:13:11:55] ENGINE Keyboard Interrupt: shutting down bus
+[20/Apr/2016:13:11:55] ENGINE Bus STOPPING
+[20/Apr/2016:13:11:58] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('127.0.0.1', 8080)) shut down
+[20/Apr/2016:13:11:58] ENGINE Stopped thread '_TimeoutMonitor'.
+[20/Apr/2016:13:11:58] ENGINE Bus STOPPED
+[20/Apr/2016:13:11:58] ENGINE Bus EXITING
+[20/Apr/2016:13:11:58] ENGINE Bus EXITED
+[20/Apr/2016:13:11:58] ENGINE Waiting for child threads to terminate...

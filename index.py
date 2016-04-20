@@ -36,7 +36,7 @@ class HelloWorld(object):
     def details(self, licence):
         gestionadherent = AdherentsDAO()
         serviceAdherent = ServiceAdherent(gestionadherent.findById(licence))
-        return _pageDetailsAdherent.render(adherent=serviceAdherent.adherent)
+        return _pageDetailsAdherent.render(adherent=serviceAdherent.adherent, grades=serviceAdherent.adherent.grades)
 
 if __name__ == '__main__':
 
