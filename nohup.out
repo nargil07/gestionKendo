@@ -32,3 +32,5 @@ OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=350m; support was 
 [17/Apr/2016:14:52:19] ENGINE Waiting for child threads to terminate...
 /home/antony/Documents/python/gestionKendo
 OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=350m; support was removed in 8.0
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=350m; support was removed in 8.0
+[  50552]   WARN - ConfigurableExtensionPointUtil - ignore deprecated groupId: editor for id: editor.preferences.import 

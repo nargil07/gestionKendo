@@ -935,3 +935,61 @@ TypeError: render_body() takes 1 positional argument but 2 were given
 [20/Apr/2016:13:11:58] ENGINE Bus EXITING
 [20/Apr/2016:13:11:58] ENGINE Bus EXITED
 [20/Apr/2016:13:11:58] ENGINE Waiting for child threads to terminate...
+[29/Apr/2016:10:10:05] ENGINE Listening for SIGUSR1.
+[29/Apr/2016:10:10:05] ENGINE Listening for SIGTERM.
+[29/Apr/2016:10:10:05] ENGINE Listening for SIGHUP.
+[29/Apr/2016:10:10:05] ENGINE Bus STARTING
+[29/Apr/2016:10:10:05] ENGINE Started monitor thread '_TimeoutMonitor'.
+[29/Apr/2016:10:10:05] ENGINE Serving on http://127.0.0.1:8080
+[29/Apr/2016:10:10:05] ENGINE Bus STARTED
+[29/Apr/2016:10:15:06] HTTP 
+Traceback (most recent call last):
+  File "/home/antony/Documents/python/gestionKendo/kendoDAO/AbstractDAO.py", line 7, in __init__
+    engine = create_engine('sqlite3:///bd.db', echo=False)
+  File "/home/antony/Documents/python/gestionKendo/virtualEnv/lib/python3.4/site-packages/sqlalchemy/engine/__init__.py", line 386, in create_engine
+    return strategy.create(*args, **kwargs)
+  File "/home/antony/Documents/python/gestionKendo/virtualEnv/lib/python3.4/site-packages/sqlalchemy/engine/strategies.py", line 51, in create
+    entrypoint = u._get_entrypoint()
+  File "/home/antony/Documents/python/gestionKendo/virtualEnv/lib/python3.4/site-packages/sqlalchemy/engine/url.py", line 131, in _get_entrypoint
+    cls = registry.load(name)
+  File "/home/antony/Documents/python/gestionKendo/virtualEnv/lib/python3.4/site-packages/sqlalchemy/util/langhelpers.py", line 212, in load
+    (self.group, name))
+sqlalchemy.exc.NoSuchModuleError: Can't load plugin: sqlalchemy.dialects:sqlite3
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/antony/Documents/python/gestionKendo/virtualEnv/lib/python3.4/site-packages/cherrypy/_cprequest.py", line 670, in respond
+    response.body = self.handler()
+  File "/home/antony/Documents/python/gestionKendo/virtualEnv/lib/python3.4/site-packages/cherrypy/lib/encoding.py", line 217, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/home/antony/Documents/python/gestionKendo/virtualEnv/lib/python3.4/site-packages/cherrypy/_cpdispatch.py", line 60, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "index.py", line 33, in index
+    gestionadherent = AdherentsDAO()
+  File "/home/antony/Documents/python/gestionKendo/kendoDAO/AbstractDAO.py", line 11, in __init__
+    raise Exception(err.message)
+AttributeError: 'NoSuchModuleError' object has no attribute 'message'
+[29/Apr/2016:10:27:04] ENGINE Keyboard Interrupt: shutting down bus
+[29/Apr/2016:10:27:04] ENGINE Bus STOPPING
+[29/Apr/2016:10:27:04] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('127.0.0.1', 8080)) shut down
+[29/Apr/2016:10:27:04] ENGINE Stopped thread '_TimeoutMonitor'.
+[29/Apr/2016:10:27:04] ENGINE Bus STOPPED
+[29/Apr/2016:10:27:04] ENGINE Bus EXITING
+[29/Apr/2016:10:27:04] ENGINE Bus EXITED
+[29/Apr/2016:10:27:04] ENGINE Waiting for child threads to terminate...
+[29/Apr/2016:10:27:07] ENGINE Listening for SIGHUP.
+[29/Apr/2016:10:27:07] ENGINE Listening for SIGUSR1.
+[29/Apr/2016:10:27:07] ENGINE Listening for SIGTERM.
+[29/Apr/2016:10:27:07] ENGINE Bus STARTING
+[29/Apr/2016:10:27:07] ENGINE Started monitor thread '_TimeoutMonitor'.
+[29/Apr/2016:10:27:07] ENGINE Serving on http://127.0.0.1:8080
+[29/Apr/2016:10:27:07] ENGINE Bus STARTED
+[29/Apr/2016:10:48:02] ENGINE Keyboard Interrupt: shutting down bus
+[29/Apr/2016:10:48:02] ENGINE Bus STOPPING
+[29/Apr/2016:10:48:02] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('127.0.0.1', 8080)) shut down
+[29/Apr/2016:10:48:02] ENGINE Stopped thread '_TimeoutMonitor'.
+[29/Apr/2016:10:48:02] ENGINE Bus STOPPED
+[29/Apr/2016:10:48:02] ENGINE Bus EXITING
+[29/Apr/2016:10:48:02] ENGINE Bus EXITED
+[29/Apr/2016:10:48:02] ENGINE Waiting for child threads to terminate...
