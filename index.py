@@ -1,9 +1,12 @@
+# -*-coding:UTF-8 -*
 import inspect
 import os
 import cherrypy
+from kendoDAO.ProfesseursDAO import ProfesseursDAO
 from mako.lookup import TemplateLookup
 from kendoDAO.AdherentsDAO import AdherentsDAO
 from service.ServiceAdherent import ServiceAdherent
+from service.ServiceProfesseur import ServiceProfesseur
 
 try:
     _curdir = os.path.join(os.getcwd(), os.path.dirname(os.path.abspath(__file__)))
@@ -22,21 +25,38 @@ mylookup = TemplateLookup(directories=[myTemplatesDir], module_directory=myModul
 # ------------------------------------------------------------
 # Templates HTML
 # ------------------------------------------------------------
-_pageListAdherent = mylookup.get_template("adherents.mako.html")
+_pageListAdherents = mylookup.get_template("adherents.mako.html")
 _pageDetailsAdherent = mylookup.get_template("details.adherent.mako.html")
+_pageListProfesseurs = mylookup.get_template("professeurs.mako.html")
+_pageDetailsProfesseur = mylookup.get_template("details.professeur.mako.html")
 
 
 class HelloWorld(object):
     @cherrypy.expose
     def index(self):
         gestionadherent = AdherentsDAO()
-        return _pageListAdherent.render(adherents=gestionadherent.findAll())
+        return _pageListAdherents.render(adherents=gestionadherent.findAll())
+
 
     @cherrypy.expose
-    def details(self, licence):
+    def professeurs(self):
+        gestionProfesseur = ProfesseursDAO()
+        return _pageListProfesseurs.render(professeurs=gestionProfesseur.findAll())
+
+    @cherrypy.expose
+    def detailsAdherent(self, licence):
         gestionadherent = AdherentsDAO()
         serviceAdherent = ServiceAdherent(gestionadherent.findById(licence))
-        return _pageDetailsAdherent.render(adherent=serviceAdherent.adherent, grades=serviceAdherent.adherent.grades)
+        return _pageDetailsAdherent.render(adherent=serviceAdherent.adherent,
+                                           grades=serviceAdherent.adherent.grades)
+
+    @cherrypy.expose
+    def detailsProfesseur(self, licence):
+        gestionProfesseur = ProfesseursDAO()
+        serviceProfesseur = ServiceProfesseur(gestionProfesseur.findById(licence))
+        return _pageDetailsProfesseur.render(professeur=serviceProfesseur.professeur,
+                                           grades=serviceProfesseur.professeur.grades,
+                                           diplomes=serviceProfesseur.professeur.diplomes)
 
 
 if __name__ == '__main__':

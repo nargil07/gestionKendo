@@ -1,4 +1,4 @@
-#!/home/antony/Documents/python/gestionKendo/virtualEnv/bin/python3
+#!/home/antony/Documents/python/gestionKendo/virtualenv/bin/python3
 
 import cherrypy.daemon
 

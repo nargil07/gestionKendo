@@ -1,0 +1,42 @@
+<%inherit file="base.mako.html" />
+<%block name="container">
+<div class="row">
+    <div class="col-lg-12">
+        <div class="col-lg-2"></div>
+        <div class="col-lg-8">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    Les professeurs
+                </div>
+                <div class="panel-body">
+                    <table class="col-lg-12">
+                        <thead>
+                        <th>Nom</th>
+                        <th>Prenom</th>
+                        <th>Date de naissance</th>
+                        <th>Action</th>
+                        </thead>
+                        <tbody>
+                        %for professeur in professeurs:
+                        <tr>
+                            <form action="detailsProfesseur">
+                                <td>${professeur.nom}</td>
+                                <td>${professeur.prenom}</td>
+                                <td>${professeur.dateNaissance}</td>
+                                <td>
+                                    <input type="hidden" name="licence" value="${professeur.licence}">
+                                    <input type="submit" value="Afficher detail">
+                                </td>
+                            </form>
+                        </tr>
+                        %endfor
+                        </tbody>
+
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-2"></div>
+    </div>
+</div>
+</%block>

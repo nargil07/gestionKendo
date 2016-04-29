@@ -5,7 +5,7 @@ STOP_RENDERING = runtime.STOP_RENDERING
 __M_dict_builtin = dict
 __M_locals_builtin = locals
 _magic_number = 10
-_modified_time = 1460891155.5432985
+_modified_time = 1461964494.9394975
 _enable_loop = True
 _template_filename = '/home/antony/Documents/python/gestionKendo/web/views/templates/adherents.mako.html'
 _template_uri = 'adherents.mako.html'
@@ -28,9 +28,9 @@ def render_body(context,**pageargs):
     __M_caller = context.caller_stack._push_frame()
     try:
         __M_locals = __M_dict_builtin(pageargs=pageargs)
+        adherents = context.get('adherents', UNDEFINED)
         def container():
             return render_container(context._locals(__M_locals))
-        adherents = context.get('adherents', UNDEFINED)
         __M_writer = context.writer()
         __M_writer('\n')
         if 'parent' not in context._data or not hasattr(context._data['parent'], 'container'):
@@ -45,13 +45,13 @@ def render_body(context,**pageargs):
 def render_container(context,**pageargs):
     __M_caller = context.caller_stack._push_frame()
     try:
+        adherents = context.get('adherents', UNDEFINED)
         def container():
             return render_container(context)
-        adherents = context.get('adherents', UNDEFINED)
         __M_writer = context.writer()
         __M_writer('\n<div class="row">\n    <div class="col-lg-12">\n        <div class="col-lg-2"></div>\n        <div class="col-lg-8">\n            <div class="panel panel-default">\n                <div class="panel-heading">\n                    Les adherents\n                </div>\n                <div class="panel-body">\n                    <table class="col-lg-12">\n                        <thead>\n                        <th>Nom</th>\n                        <th>Prenom</th>\n                        <th>Date de naissance</th>\n                        <th>Action</th>\n                        </thead>\n                        <tbody>\n')
         for adherent in adherents:
-            __M_writer('                        <tr>\n                            <form action="details">\n                                <td>')
+            __M_writer('                        <tr>\n                            <form action="detailsAdherent">\n                                <td>')
             __M_writer(str(adherent.nom))
             __M_writer('</td>\n                                <td>')
             __M_writer(str(adherent.prenom))
@@ -68,6 +68,6 @@ def render_container(context,**pageargs):
 
 """
 __M_BEGIN_METADATA
-{"filename": "/home/antony/Documents/python/gestionKendo/web/views/templates/adherents.mako.html", "source_encoding": "ascii", "line_map": {"35": 1, "69": 63, "45": 2, "27": 0, "52": 2, "53": 20, "54": 21, "55": 23, "56": 23, "57": 24, "58": 24, "59": 25, "60": 25, "61": 27, "62": 27, "63": 33}, "uri": "adherents.mako.html"}
+{"uri": "adherents.mako.html", "source_encoding": "ascii", "filename": "/home/antony/Documents/python/gestionKendo/web/views/templates/adherents.mako.html", "line_map": {"35": 1, "69": 63, "45": 2, "27": 0, "52": 2, "53": 20, "54": 21, "55": 23, "56": 23, "57": 24, "58": 24, "59": 25, "60": 25, "61": 27, "62": 27, "63": 33}}
 __M_END_METADATA
 """

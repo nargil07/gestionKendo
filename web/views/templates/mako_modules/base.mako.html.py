@@ -5,7 +5,7 @@ STOP_RENDERING = runtime.STOP_RENDERING
 __M_dict_builtin = dict
 __M_locals_builtin = locals
 _magic_number = 10
-_modified_time = 1460303714.5023108
+_modified_time = 1461962638.92174
 _enable_loop = True
 _template_filename = '/home/antony/Documents/python/gestionKendo/web/views/templates/base.mako.html'
 _template_uri = 'base.mako.html'
@@ -20,7 +20,7 @@ def render_body(context,**pageargs):
         def container():
             return render_container(context._locals(__M_locals))
         __M_writer = context.writer()
-        __M_writer('<!DOCTYPE html>\n<html lang="fr">\n<head>\n    <meta charset="UTF-8">\n    <title>Site d\'antony</title>\n    <link href="/static/css/bootstrap.min.css" rel="stylesheet">\n    <link href="/static/css/style.css" rel="stylesheet">\n</head>\n<body>\n<nav class="navbar navbar-inverse navbar-fixed-top">\n    <div class="container">\n        <div class="navbar-header">\n            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"\n                    aria-expanded="false" aria-controls="navbar">\n                <span class="sr-only">Toggle navigation</span>\n                <span class="icon-bar"></span>\n                <span class="icon-bar"></span>\n                <span class="icon-bar"></span>\n            </button>\n            <a class="navbar-brand" href="#">Gestion Kendo</a>\n        </div>\n        <div id="navbar" class="collapse navbar-collapse">\n            <ul class="nav navbar-nav">\n                <li class="active"><a href="#">Adherents</a></li>\n                <li><a href="#about">Professeurs</a></li>\n            </ul>\n        </div><!--/.nav-collapse -->\n    </div>\n</nav>\n<div id="body">\n    ')
+        __M_writer('<!DOCTYPE html>\n<html lang="fr">\n<head>\n    <meta charset="UTF-8">\n    <title>Site d\'antony</title>\n    <link href="/static/css/bootstrap.min.css" rel="stylesheet">\n    <link href="/static/css/style.css" rel="stylesheet">\n</head>\n<body>\n<nav class="navbar navbar-inverse navbar-fixed-top">\n    <div class="container">\n        <div class="navbar-header">\n            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"\n                    aria-expanded="false" aria-controls="navbar">\n                <span class="sr-only">Toggle navigation</span>\n                <span class="icon-bar"></span>\n                <span class="icon-bar"></span>\n                <span class="icon-bar"></span>\n            </button>\n            <a class="navbar-brand" href="#">Gestion Kendo</a>\n        </div>\n        <div id="navbar" class="collapse navbar-collapse">\n            <ul class="nav navbar-nav">\n                <li><a href="index">Adherents</a></li>\n                <li><a href="professeurs">Professeurs</a></li>\n            </ul>\n        </div><!--/.nav-collapse -->\n    </div>\n</nav>\n<div id="body">\n    ')
         if 'parent' not in context._data or not hasattr(context._data['parent'], 'container'):
             context['self'].container(**pageargs)
         
@@ -45,6 +45,6 @@ def render_container(context,**pageargs):
 
 """
 __M_BEGIN_METADATA
-{"uri": "base.mako.html", "source_encoding": "ascii", "filename": "/home/antony/Documents/python/gestionKendo/web/views/templates/base.mako.html", "line_map": {"16": 0, "34": 31, "23": 1, "40": 31, "28": 32, "46": 40}}
+{"source_encoding": "ascii", "filename": "/home/antony/Documents/python/gestionKendo/web/views/templates/base.mako.html", "line_map": {"16": 0, "34": 31, "23": 1, "40": 31, "28": 32, "46": 40}, "uri": "base.mako.html"}
 __M_END_METADATA
 """
