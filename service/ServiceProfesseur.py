@@ -1,6 +1,6 @@
 from kendoDAO.DiplomesDAO import DiplomesDAO
 from kendoDAO.ProfesseursDAO import ProfesseursDAO
-from models import Professeur
+from models import Professeur, Diplome
 
 """
 Cette classe a pour utilité la gestion d'un professeur
@@ -24,3 +24,7 @@ class ServiceProfesseur():
     """
     def ajouterDiplome(self, libelleGrade):
         self.diplomesDAO.insert(libelleGrade, self.professeur.licence)
+
+    def ajouterDiplomeWithAllInfo(self, libelle, date):
+        diplome = Diplome(libelle, self.professeur.licence, date)
+        self.diplomesDAO.insertObject(diplome)

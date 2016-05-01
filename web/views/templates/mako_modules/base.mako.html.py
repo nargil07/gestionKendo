@@ -5,7 +5,7 @@ STOP_RENDERING = runtime.STOP_RENDERING
 __M_dict_builtin = dict
 __M_locals_builtin = locals
 _magic_number = 10
-_modified_time = 1461962638.92174
+_modified_time = 1462024710.7870555
 _enable_loop = True
 _template_filename = '/home/antony/Documents/python/gestionKendo/web/views/templates/base.mako.html'
 _template_uri = 'base.mako.html'
@@ -37,7 +37,7 @@ def render_container(context,**pageargs):
         def container():
             return render_container(context)
         __M_writer = context.writer()
-        __M_writer('\n    ')
+        __M_writer('\n')
         return ''
     finally:
         context.caller_stack._pop_frame()
@@ -45,6 +45,6 @@ def render_container(context,**pageargs):
 
 """
 __M_BEGIN_METADATA
-{"source_encoding": "ascii", "filename": "/home/antony/Documents/python/gestionKendo/web/views/templates/base.mako.html", "line_map": {"16": 0, "34": 31, "23": 1, "40": 31, "28": 32, "46": 40}, "uri": "base.mako.html"}
+{"line_map": {"16": 0, "34": 31, "23": 1, "40": 31, "28": 32, "46": 40}, "uri": "base.mako.html", "filename": "/home/antony/Documents/python/gestionKendo/web/views/templates/base.mako.html", "source_encoding": "ascii"}
 __M_END_METADATA
 """

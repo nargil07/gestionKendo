@@ -5,7 +5,7 @@ STOP_RENDERING = runtime.STOP_RENDERING
 __M_dict_builtin = dict
 __M_locals_builtin = locals
 _magic_number = 10
-_modified_time = 1461965551.4171379
+_modified_time = 1462093439.0111115
 _enable_loop = True
 _template_filename = '/home/antony/Documents/python/gestionKendo/web/views/templates/details.professeur.mako.html'
 _template_uri = 'details.professeur.mako.html'
@@ -28,10 +28,10 @@ def render_body(context,**pageargs):
     __M_caller = context.caller_stack._push_frame()
     try:
         __M_locals = __M_dict_builtin(pageargs=pageargs)
-        professeur = context.get('professeur', UNDEFINED)
+        grades = context.get('grades', UNDEFINED)
         def container():
             return render_container(context._locals(__M_locals))
-        grades = context.get('grades', UNDEFINED)
+        professeur = context.get('professeur', UNDEFINED)
         diplomes = context.get('diplomes', UNDEFINED)
         __M_writer = context.writer()
         __M_writer('\n')
@@ -47,10 +47,10 @@ def render_body(context,**pageargs):
 def render_container(context,**pageargs):
     __M_caller = context.caller_stack._push_frame()
     try:
-        professeur = context.get('professeur', UNDEFINED)
+        grades = context.get('grades', UNDEFINED)
         def container():
             return render_container(context)
-        grades = context.get('grades', UNDEFINED)
+        professeur = context.get('professeur', UNDEFINED)
         diplomes = context.get('diplomes', UNDEFINED)
         __M_writer = context.writer()
         __M_writer('\n<div class="row">\n    <div class="col-lg-12">\n        <div class="col-lg-4"></div>\n        <div class="col-lg-4">\n            <div class="panel panel-default">\n                <div class="panel-heading">\n                    Professeur\n                </div>\n                <div class="panel-body">\n                    <p>Nom : ')
@@ -64,12 +64,14 @@ def render_container(context,**pageargs):
             __M_writer('                                    <p>')
             __M_writer(str(grade.libelle))
             __M_writer('</p>\n')
-        __M_writer('                                </div>\n                            </div>\n                        </div>\n                    </div>\n                    <div class="row">\n                        <div class="col-lg-12">\n                            <div class="panel panel-default">\n                                <div class="panel-heading">\n                                    Diplomes\n                                </div>\n                                <div class="panel-body">\n')
+        __M_writer('                                </div>\n                            </div>\n                        </div>\n                    </div>\n                    <div class="row">\n                        <div class="col-lg-12">\n                            <div class="panel panel-default">\n                                <div class="panel-heading">\n                                    Diplomes\n                                    <span class="glyphicon glyphicon-plus pull-right plus-button" aria-hidden="true"\n                                          data-toggle="modal" data-target="#addDiplome"></span>\n                                </div>\n                                <div class="panel-body">\n')
         for diplome in diplomes:
             __M_writer('                                    <p>')
             __M_writer(str(diplome.libelle))
             __M_writer('</p>\n')
-        __M_writer('                                </div>\n                            </div>\n                        </div>\n                    </div>\n                </div>\n            </div>\n            <div class="col-lg-4"></div>\n        </div>\n    </div>\n</div>\n')
+        __M_writer('                                </div>\n                            </div>\n                        </div>\n                    </div>\n                </div>\n            </div>\n            <div class="col-lg-4"></div>\n        </div>\n    </div>\n</div>\n<!-- Modal Ajout telephone -->\n<div class="modal fade" id="addDiplome" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">\n    <div class="modal-dialog" role="document">\n        <div class="modal-content">\n            <form action="ajoutDiplome">\n                <div class="modal-header">\n                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span\n                            aria-hidden="true">&times;</span></button>\n                    <h4 class="modal-title" id="myModalLabel">Ajout d\'un diplomes</h4>\n                </div>\n                <div class="modal-body">\n                    <input type="hidden" name="licence" value="')
+        __M_writer(str(professeur.licence))
+        __M_writer('">\n                    <input type="text" name="libelle">\n                    <input type="date" name="date">\n                </div>\n                <div class="modal-footer">\n                    <input type="submit" class="btn btn-primary" value="Valider">\n                </div>\n            </form>\n        </div>\n    </div>\n</div>\n')
         return ''
     finally:
         context.caller_stack._pop_frame()
@@ -77,6 +79,6 @@ def render_container(context,**pageargs):
 
 """
 __M_BEGIN_METADATA
-{"source_encoding": "ascii", "filename": "/home/antony/Documents/python/gestionKendo/web/views/templates/details.professeur.mako.html", "line_map": {"64": 23, "65": 23, "66": 23, "27": 0, "68": 36, "37": 1, "70": 37, "71": 37, "72": 39, "78": 72, "47": 2, "67": 25, "69": 37, "56": 2, "57": 12, "58": 12, "59": 13, "60": 13, "61": 14, "62": 14, "63": 22}, "uri": "details.professeur.mako.html"}
+{"line_map": {"64": 23, "65": 23, "66": 23, "67": 25, "68": 38, "69": 39, "70": 39, "71": 39, "72": 41, "73": 62, "74": 62, "80": 74, "27": 0, "37": 1, "47": 2, "56": 2, "57": 12, "58": 12, "59": 13, "60": 13, "61": 14, "62": 14, "63": 22}, "source_encoding": "ascii", "uri": "details.professeur.mako.html", "filename": "/home/antony/Documents/python/gestionKendo/web/views/templates/details.professeur.mako.html"}
 __M_END_METADATA
 """

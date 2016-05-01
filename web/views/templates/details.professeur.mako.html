@@ -31,6 +31,8 @@
                             <div class="panel panel-default">
                                 <div class="panel-heading">
                                     Diplomes
+                                    <span class="glyphicon glyphicon-plus pull-right plus-button" aria-hidden="true"
+                                          data-toggle="modal" data-target="#addDiplome"></span>
                                 </div>
                                 <div class="panel-body">
                                     %for diplome in diplomes:
@@ -43,6 +45,28 @@
                 </div>
             </div>
             <div class="col-lg-4"></div>
+        </div>
+    </div>
+</div>
+<!-- Modal Ajout telephone -->
+<div class="modal fade" id="addDiplome" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <form action="ajoutDiplome">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                            aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Ajout d'un diplomes</h4>
+                </div>
+                <div class="modal-body">
+                    <input type="hidden" name="licence" value="${professeur.licence}">
+                    <input type="text" name="libelle">
+                    <input type="date" name="date">
+                </div>
+                <div class="modal-footer">
+                    <input type="submit" class="btn btn-primary" value="Valider">
+                </div>
+            </form>
         </div>
     </div>
 </div>

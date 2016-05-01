@@ -21,3 +21,7 @@ class DiplomesDAO(DAO):
         diplome = Diplome(titre, idProfesseur, date.today())
         self.session.add(diplome)
         self.session.commit()
+
+    def insertObject(self, diplome):
+        self.session.add(diplome)
+        self.session.commit()

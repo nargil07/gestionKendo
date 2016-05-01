@@ -1,10 +1,13 @@
 # -*-coding:UTF-8 -*
 import inspect
+from datetime import datetime
+
 import os
 import cherrypy
 from kendoDAO.ProfesseursDAO import ProfesseursDAO
 from mako.lookup import TemplateLookup
 from kendoDAO.AdherentsDAO import AdherentsDAO
+from models import Diplome
 from service.ServiceAdherent import ServiceAdherent
 from service.ServiceProfesseur import ServiceProfesseur
 
@@ -37,7 +40,6 @@ class HelloWorld(object):
         gestionadherent = AdherentsDAO()
         return _pageListAdherents.render(adherents=gestionadherent.findAll())
 
-
     @cherrypy.expose
     def professeurs(self):
         gestionProfesseur = ProfesseursDAO()
@@ -55,8 +57,15 @@ class HelloWorld(object):
         gestionProfesseur = ProfesseursDAO()
         serviceProfesseur = ServiceProfesseur(gestionProfesseur.findById(licence))
         return _pageDetailsProfesseur.render(professeur=serviceProfesseur.professeur,
-                                           grades=serviceProfesseur.professeur.grades,
-                                           diplomes=serviceProfesseur.professeur.diplomes)
+                                             grades=serviceProfesseur.professeur.grades,
+                                             diplomes=serviceProfesseur.professeur.diplomes)
+
+    @cherrypy.expose
+    def ajoutDiplome(self, licence, libelle, date):
+        gestionProfesseur = ProfesseursDAO()
+        serviceProfesseur = ServiceProfesseur(gestionProfesseur.findById(licence))
+        serviceProfesseur.ajouterDiplomeWithAllInfo(libelle, datetime.strptime(date,"%Y-%m-%d"))
+        return self.detailsProfesseur(licence)
 
 
 if __name__ == '__main__':
@@ -84,6 +93,8 @@ if __name__ == '__main__':
                   '/static/images': {'tools.staticdir.on': True,
                                      'tools.staticdir.dir': os.path.join(webDir, 'static/images'),
                                      'tools.staticdir.content_types': {'jpg': 'image/jpg'}},
+                  '/static/fonts': {'tools.staticdir.on': True,
+                                    'tools.staticdir.dir': os.path.join(webDir, 'static/fonts')},
                   '/static/js': {'tools.staticdir.on': True,
                                  'tools.staticdir.dir': os.path.join(webDir, 'static/js'),
                                  'tools.staticdir.content_types': {'js': 'application/javascript'}}}
