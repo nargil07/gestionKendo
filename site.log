@@ -1412,3 +1412,620 @@ sqlalchemy.exc.StatementError: (builtins.TypeError) SQLite DateTime type only ac
 [01/May/2016:11:09:24] ENGINE Bus EXITING
 [01/May/2016:11:09:24] ENGINE Bus EXITED
 [01/May/2016:11:09:24] ENGINE Waiting for child threads to terminate...
+[09/May/2016:13:34:07] ENGINE Listening for SIGUSR1.
+[09/May/2016:13:34:07] ENGINE Listening for SIGHUP.
+[09/May/2016:13:34:07] ENGINE Listening for SIGTERM.
+[09/May/2016:13:34:07] ENGINE Bus STARTING
+[09/May/2016:13:34:07] ENGINE Started monitor thread '_TimeoutMonitor'.
+[09/May/2016:13:34:07] ENGINE Serving on http://127.0.0.1:8080
+[09/May/2016:13:34:07] ENGINE Bus STARTED
+[09/May/2016:13:50:41] ENGINE Keyboard Interrupt: shutting down bus
+[09/May/2016:13:50:41] ENGINE Bus STOPPING
+[09/May/2016:13:50:41] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('127.0.0.1', 8080)) shut down
+[09/May/2016:13:50:41] ENGINE Stopped thread '_TimeoutMonitor'.
+[09/May/2016:13:50:41] ENGINE Bus STOPPED
+[09/May/2016:13:50:41] ENGINE Bus EXITING
+[09/May/2016:13:50:41] ENGINE Bus EXITED
+[09/May/2016:13:50:41] ENGINE Waiting for child threads to terminate...
+[09/May/2016:13:50:44] ENGINE Listening for SIGHUP.
+[09/May/2016:13:50:44] ENGINE Listening for SIGUSR1.
+[09/May/2016:13:50:44] ENGINE Listening for SIGTERM.
+[09/May/2016:13:50:44] ENGINE Bus STARTING
+[09/May/2016:13:50:44] ENGINE Started monitor thread '_TimeoutMonitor'.
+[09/May/2016:13:50:44] ENGINE Serving on http://127.0.0.1:8080
+[09/May/2016:13:50:44] ENGINE Bus STARTED
+[09/May/2016:16:59:04] ENGINE Keyboard Interrupt: shutting down bus
+[09/May/2016:16:59:04] ENGINE Bus STOPPING
+[09/May/2016:16:59:04] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('127.0.0.1', 8080)) shut down
+[09/May/2016:16:59:04] ENGINE Stopped thread '_TimeoutMonitor'.
+[09/May/2016:16:59:04] ENGINE Bus STOPPED
+[09/May/2016:16:59:04] ENGINE Bus EXITING
+[09/May/2016:16:59:04] ENGINE Bus EXITED
+[09/May/2016:16:59:04] ENGINE Waiting for child threads to terminate...
+[09/May/2016:20:19:11] ENGINE Listening for SIGTERM.
+[09/May/2016:20:19:11] ENGINE Listening for SIGUSR1.
+[09/May/2016:20:19:11] ENGINE Listening for SIGHUP.
+[09/May/2016:20:19:11] ENGINE Bus STARTING
+[09/May/2016:20:19:11] ENGINE Started monitor thread '_TimeoutMonitor'.
+[09/May/2016:20:19:11] ENGINE Serving on http://127.0.0.1:8080
+[09/May/2016:20:19:11] ENGINE Bus STARTED
+[09/May/2016:20:19:30] HTTP 
+Traceback (most recent call last):
+  File "/home/antony/Documents/python/gestionKendo/virtualenv/lib/python3.4/site-packages/cherrypy/_cprequest.py", line 670, in respond
+    response.body = self.handler()
+  File "/home/antony/Documents/python/gestionKendo/virtualenv/lib/python3.4/site-packages/cherrypy/lib/encoding.py", line 217, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/home/antony/Documents/python/gestionKendo/virtualenv/lib/python3.4/site-packages/cherrypy/_cpdispatch.py", line 60, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "/home/antony/Documents/python/gestionKendo/index.py", line 80, in ajoutGradeProf
+    serviceAdherent.ajouterGradeWithAllInfo(libelle, datetime.strptime(date,"%Y-%m-%d"))
+  File "/home/antony/Documents/python/gestionKendo/service/ServiceAdherent.py", line 31, in ajouterGradeWithAllInfo
+    grade = Grade(libelle, self.professeur.licence, date)
+AttributeError: 'ServiceAdherent' object has no attribute 'professeur'
+[09/May/2016:22:01:02] ENGINE Keyboard Interrupt: shutting down bus
+[09/May/2016:22:01:02] ENGINE Bus STOPPING
+[09/May/2016:22:01:02] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('127.0.0.1', 8080)) shut down
+[09/May/2016:22:01:02] ENGINE Stopped thread '_TimeoutMonitor'.
+[09/May/2016:22:01:02] ENGINE Bus STOPPED
+[09/May/2016:22:01:02] ENGINE Bus EXITING
+[09/May/2016:22:01:02] ENGINE Bus EXITED
+[09/May/2016:22:01:02] ENGINE Waiting for child threads to terminate...
+[09/May/2016:23:28:53] ENGINE Listening for SIGUSR1.
+[09/May/2016:23:28:53] ENGINE Listening for SIGTERM.
+[09/May/2016:23:28:53] ENGINE Listening for SIGHUP.
+[09/May/2016:23:28:53] ENGINE Bus STARTING
+[09/May/2016:23:28:53] ENGINE Started monitor thread '_TimeoutMonitor'.
+[09/May/2016:23:28:53] ENGINE Serving on http://127.0.0.1:8080
+[09/May/2016:23:28:53] ENGINE Bus STARTED
+[09/May/2016:23:29:10] HTTP 
+Traceback (most recent call last):
+  File "/home/antony/Documents/python/gestionKendo/virtualenv/lib/python3.4/site-packages/cherrypy/_cprequest.py", line 670, in respond
+    response.body = self.handler()
+  File "/home/antony/Documents/python/gestionKendo/virtualenv/lib/python3.4/site-packages/cherrypy/lib/encoding.py", line 217, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/home/antony/Documents/python/gestionKendo/virtualenv/lib/python3.4/site-packages/cherrypy/_cpdispatch.py", line 60, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "/home/antony/Documents/python/gestionKendo/index.py", line 81, in ajoutGradeProf
+    serviceAdherent.ajouterGradeWithAllInfo(libelle, datetime.strptime(date,"%Y-%m-%d"))
+  File "/home/antony/Documents/python/gestionKendo/service/ServiceAdherent.py", line 32, in ajouterGradeWithAllInfo
+    self.gradesDAO.insertObject(grade)
+AttributeError: 'ServiceAdherent' object has no attribute 'gradesDAO'
+[09/May/2016:23:29:40] ENGINE Keyboard Interrupt: shutting down bus
+[09/May/2016:23:29:40] ENGINE Bus STOPPING
+[09/May/2016:23:29:40] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('127.0.0.1', 8080)) shut down
+[09/May/2016:23:29:40] ENGINE Stopped thread '_TimeoutMonitor'.
+[09/May/2016:23:29:40] ENGINE Bus STOPPED
+[09/May/2016:23:29:40] ENGINE Bus EXITING
+[09/May/2016:23:29:40] ENGINE Bus EXITED
+[09/May/2016:23:29:40] ENGINE Waiting for child threads to terminate...
+[09/May/2016:23:29:41] ENGINE Listening for SIGTERM.
+[09/May/2016:23:29:41] ENGINE Listening for SIGUSR1.
+[09/May/2016:23:29:41] ENGINE Listening for SIGHUP.
+[09/May/2016:23:29:41] ENGINE Bus STARTING
+[09/May/2016:23:29:41] ENGINE Started monitor thread '_TimeoutMonitor'.
+[09/May/2016:23:29:42] ENGINE Serving on http://127.0.0.1:8080
+[09/May/2016:23:29:42] ENGINE Bus STARTED
+[09/May/2016:23:38:35] ENGINE Keyboard Interrupt: shutting down bus
+[09/May/2016:23:38:35] ENGINE Bus STOPPING
+[09/May/2016:23:38:35] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('127.0.0.1', 8080)) shut down
+[09/May/2016:23:38:35] ENGINE Stopped thread '_TimeoutMonitor'.
+[09/May/2016:23:38:35] ENGINE Bus STOPPED
+[09/May/2016:23:38:35] ENGINE Bus EXITING
+[09/May/2016:23:38:35] ENGINE Bus EXITED
+[09/May/2016:23:38:35] ENGINE Waiting for child threads to terminate...
+[10/May/2016:15:04:29] ENGINE Listening for SIGUSR1.
+[10/May/2016:15:04:29] ENGINE Listening for SIGTERM.
+[10/May/2016:15:04:29] ENGINE Listening for SIGHUP.
+[10/May/2016:15:04:29] ENGINE Bus STARTING
+[10/May/2016:15:04:29] ENGINE Started monitor thread '_TimeoutMonitor'.
+[10/May/2016:15:04:29] ENGINE Serving on http://127.0.0.1:8080
+[10/May/2016:15:04:29] ENGINE Bus STARTED
+[10/May/2016:15:05:22] ENGINE Keyboard Interrupt: shutting down bus
+[10/May/2016:15:05:22] ENGINE Bus STOPPING
+[10/May/2016:15:05:22] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('127.0.0.1', 8080)) shut down
+[10/May/2016:15:05:22] ENGINE Stopped thread '_TimeoutMonitor'.
+[10/May/2016:15:05:22] ENGINE Bus STOPPED
+[10/May/2016:15:05:22] ENGINE Bus EXITING
+[10/May/2016:15:05:22] ENGINE Bus EXITED
+[10/May/2016:15:05:22] ENGINE Waiting for child threads to terminate...
+[10/May/2016:15:05:23] ENGINE Listening for SIGTERM.
+[10/May/2016:15:05:23] ENGINE Listening for SIGUSR1.
+[10/May/2016:15:05:23] ENGINE Listening for SIGHUP.
+[10/May/2016:15:05:23] ENGINE Bus STARTING
+[10/May/2016:15:05:23] ENGINE Started monitor thread '_TimeoutMonitor'.
+[10/May/2016:15:05:23] ENGINE Serving on http://127.0.0.1:8080
+[10/May/2016:15:05:23] ENGINE Bus STARTED
+[10/May/2016:15:27:22] ENGINE Keyboard Interrupt: shutting down bus
+[10/May/2016:15:27:22] ENGINE Bus STOPPING
+[10/May/2016:15:27:22] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('127.0.0.1', 8080)) shut down
+[10/May/2016:15:27:22] ENGINE Stopped thread '_TimeoutMonitor'.
+[10/May/2016:15:27:22] ENGINE Bus STOPPED
+[10/May/2016:15:27:22] ENGINE Bus EXITING
+[10/May/2016:15:27:22] ENGINE Bus EXITED
+[10/May/2016:15:27:22] ENGINE Waiting for child threads to terminate...
+[10/May/2016:15:31:05] ENGINE Listening for SIGTERM.
+[10/May/2016:15:31:05] ENGINE Listening for SIGUSR1.
+[10/May/2016:15:31:05] ENGINE Listening for SIGHUP.
+[10/May/2016:15:31:05] ENGINE Bus STARTING
+[10/May/2016:15:31:05] ENGINE Started monitor thread '_TimeoutMonitor'.
+[10/May/2016:15:31:05] ENGINE Serving on http://127.0.0.1:8080
+[10/May/2016:15:31:05] ENGINE Bus STARTED
+[10/May/2016:15:32:07] ENGINE Keyboard Interrupt: shutting down bus
+[10/May/2016:15:32:07] ENGINE Bus STOPPING
+[10/May/2016:15:32:07] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('127.0.0.1', 8080)) shut down
+[10/May/2016:15:32:07] ENGINE Stopped thread '_TimeoutMonitor'.
+[10/May/2016:15:32:07] ENGINE Bus STOPPED
+[10/May/2016:15:32:07] ENGINE Bus EXITING
+[10/May/2016:15:32:07] ENGINE Bus EXITED
+[10/May/2016:15:32:07] ENGINE Waiting for child threads to terminate...
+[10/May/2016:15:32:44] ENGINE Listening for SIGUSR1.
+[10/May/2016:15:32:44] ENGINE Listening for SIGHUP.
+[10/May/2016:15:32:44] ENGINE Listening for SIGTERM.
+[10/May/2016:15:32:44] ENGINE Bus STARTING
+[10/May/2016:15:32:44] ENGINE Started monitor thread '_TimeoutMonitor'.
+[10/May/2016:15:32:44] ENGINE Serving on http://127.0.0.1:8080
+[10/May/2016:15:32:44] ENGINE Bus STARTED
+[10/May/2016:15:33:34] HTTP 
+Traceback (most recent call last):
+  File "/home/antony/Documents/python/gestionKendo/virtualenv/lib/python3.4/site-packages/sqlalchemy/engine/base.py", line 1073, in _execute_context
+    context = constructor(dialect, self, conn, *args)
+  File "/home/antony/Documents/python/gestionKendo/virtualenv/lib/python3.4/site-packages/sqlalchemy/engine/default.py", line 584, in _init_compiled
+    param.append(processors[key](compiled_params[key]))
+  File "/home/antony/Documents/python/gestionKendo/virtualenv/lib/python3.4/site-packages/sqlalchemy/dialects/sqlite/base.py", line 607, in process
+    raise TypeError("SQLite DateTime type only accepts Python "
+TypeError: SQLite DateTime type only accepts Python datetime and date objects as input.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/antony/Documents/python/gestionKendo/virtualenv/lib/python3.4/site-packages/cherrypy/_cprequest.py", line 670, in respond
+    response.body = self.handler()
+  File "/home/antony/Documents/python/gestionKendo/virtualenv/lib/python3.4/site-packages/cherrypy/lib/encoding.py", line 217, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/home/antony/Documents/python/gestionKendo/virtualenv/lib/python3.4/site-packages/cherrypy/_cpdispatch.py", line 60, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "/home/antony/Documents/python/gestionKendo/index.py", line 87, in ajoutAdherent
+    gestionAdherent.insert(nom, prenom, datenaissance)
+  File "/home/antony/Documents/python/gestionKendo/kendoDAO/AdherentsDAO.py", line 37, in insert
+    self.session.commit()
+  File "/home/antony/Documents/python/gestionKendo/virtualenv/lib/python3.4/site-packages/sqlalchemy/orm/session.py", line 801, in commit
+    self.transaction.commit()
+  File "/home/antony/Documents/python/gestionKendo/virtualenv/lib/python3.4/site-packages/sqlalchemy/orm/session.py", line 392, in commit
+    self._prepare_impl()
+  File "/home/antony/Documents/python/gestionKendo/virtualenv/lib/python3.4/site-packages/sqlalchemy/orm/session.py", line 372, in _prepare_impl
+    self.session.flush()
+  File "/home/antony/Documents/python/gestionKendo/virtualenv/lib/python3.4/site-packages/sqlalchemy/orm/session.py", line 2019, in flush
+    self._flush(objects)
+  File "/home/antony/Documents/python/gestionKendo/virtualenv/lib/python3.4/site-packages/sqlalchemy/orm/session.py", line 2137, in _flush
+    transaction.rollback(_capture_exception=True)
+  File "/home/antony/Documents/python/gestionKendo/virtualenv/lib/python3.4/site-packages/sqlalchemy/util/langhelpers.py", line 60, in __exit__
+    compat.reraise(exc_type, exc_value, exc_tb)
+  File "/home/antony/Documents/python/gestionKendo/virtualenv/lib/python3.4/site-packages/sqlalchemy/util/compat.py", line 184, in reraise
+    raise value
+  File "/home/antony/Documents/python/gestionKendo/virtualenv/lib/python3.4/site-packages/sqlalchemy/orm/session.py", line 2101, in _flush
+    flush_context.execute()
+  File "/home/antony/Documents/python/gestionKendo/virtualenv/lib/python3.4/site-packages/sqlalchemy/orm/unitofwork.py", line 373, in execute
+    rec.execute(self)
+  File "/home/antony/Documents/python/gestionKendo/virtualenv/lib/python3.4/site-packages/sqlalchemy/orm/unitofwork.py", line 532, in execute
+    uow
+  File "/home/antony/Documents/python/gestionKendo/virtualenv/lib/python3.4/site-packages/sqlalchemy/orm/persistence.py", line 174, in save_obj
+    mapper, table, insert)
+  File "/home/antony/Documents/python/gestionKendo/virtualenv/lib/python3.4/site-packages/sqlalchemy/orm/persistence.py", line 800, in _emit_insert_statements
+    execute(statement, params)
+  File "/home/antony/Documents/python/gestionKendo/virtualenv/lib/python3.4/site-packages/sqlalchemy/engine/base.py", line 914, in execute
+    return meth(self, multiparams, params)
+  File "/home/antony/Documents/python/gestionKendo/virtualenv/lib/python3.4/site-packages/sqlalchemy/sql/elements.py", line 323, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "/home/antony/Documents/python/gestionKendo/virtualenv/lib/python3.4/site-packages/sqlalchemy/engine/base.py", line 1010, in _execute_clauseelement
+    compiled_sql, distilled_params
+  File "/home/antony/Documents/python/gestionKendo/virtualenv/lib/python3.4/site-packages/sqlalchemy/engine/base.py", line 1078, in _execute_context
+    None, None)
+  File "/home/antony/Documents/python/gestionKendo/virtualenv/lib/python3.4/site-packages/sqlalchemy/engine/base.py", line 1341, in _handle_dbapi_exception
+    exc_info
+  File "/home/antony/Documents/python/gestionKendo/virtualenv/lib/python3.4/site-packages/sqlalchemy/util/compat.py", line 200, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "/home/antony/Documents/python/gestionKendo/virtualenv/lib/python3.4/site-packages/sqlalchemy/util/compat.py", line 183, in reraise
+    raise value.with_traceback(tb)
+  File "/home/antony/Documents/python/gestionKendo/virtualenv/lib/python3.4/site-packages/sqlalchemy/engine/base.py", line 1073, in _execute_context
+    context = constructor(dialect, self, conn, *args)
+  File "/home/antony/Documents/python/gestionKendo/virtualenv/lib/python3.4/site-packages/sqlalchemy/engine/default.py", line 584, in _init_compiled
+    param.append(processors[key](compiled_params[key]))
+  File "/home/antony/Documents/python/gestionKendo/virtualenv/lib/python3.4/site-packages/sqlalchemy/dialects/sqlite/base.py", line 607, in process
+    raise TypeError("SQLite DateTime type only accepts Python "
+sqlalchemy.exc.StatementError: (builtins.TypeError) SQLite DateTime type only accepts Python datetime and date objects as input. [SQL: 'INSERT INTO "Adherents" (nom, prenom, "dateNaissance", type) VALUES (?, ?, ?, ?)'] [parameters: [{'type': 'Adherents', 'nom': 'Marchi', 'dateNaissance': '1992-04-14', 'prenom': 'Antony'}]]
+[10/May/2016:15:34:08] ENGINE Keyboard Interrupt: shutting down bus
+[10/May/2016:15:34:08] ENGINE Bus STOPPING
+[10/May/2016:15:34:08] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('127.0.0.1', 8080)) shut down
+[10/May/2016:15:34:08] ENGINE Stopped thread '_TimeoutMonitor'.
+[10/May/2016:15:34:08] ENGINE Bus STOPPED
+[10/May/2016:15:34:08] ENGINE Bus EXITING
+[10/May/2016:15:34:08] ENGINE Bus EXITED
+[10/May/2016:15:34:08] ENGINE Waiting for child threads to terminate...
+[10/May/2016:15:34:10] ENGINE Listening for SIGTERM.
+[10/May/2016:15:34:10] ENGINE Listening for SIGUSR1.
+[10/May/2016:15:34:10] ENGINE Listening for SIGHUP.
+[10/May/2016:15:34:10] ENGINE Bus STARTING
+[10/May/2016:15:34:10] ENGINE Started monitor thread '_TimeoutMonitor'.
+[10/May/2016:15:34:10] ENGINE Serving on http://127.0.0.1:8080
+[10/May/2016:15:34:10] ENGINE Bus STARTED
+[10/May/2016:15:34:18] HTTP 
+Traceback (most recent call last):
+  File "/home/antony/Documents/python/gestionKendo/virtualenv/lib/python3.4/site-packages/sqlalchemy/engine/base.py", line 1073, in _execute_context
+    context = constructor(dialect, self, conn, *args)
+  File "/home/antony/Documents/python/gestionKendo/virtualenv/lib/python3.4/site-packages/sqlalchemy/engine/default.py", line 584, in _init_compiled
+    param.append(processors[key](compiled_params[key]))
+  File "/home/antony/Documents/python/gestionKendo/virtualenv/lib/python3.4/site-packages/sqlalchemy/dialects/sqlite/base.py", line 607, in process
+    raise TypeError("SQLite DateTime type only accepts Python "
+TypeError: SQLite DateTime type only accepts Python datetime and date objects as input.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/antony/Documents/python/gestionKendo/virtualenv/lib/python3.4/site-packages/cherrypy/_cprequest.py", line 670, in respond
+    response.body = self.handler()
+  File "/home/antony/Documents/python/gestionKendo/virtualenv/lib/python3.4/site-packages/cherrypy/lib/encoding.py", line 217, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/home/antony/Documents/python/gestionKendo/virtualenv/lib/python3.4/site-packages/cherrypy/_cpdispatch.py", line 60, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "/home/antony/Documents/python/gestionKendo/index.py", line 87, in ajoutAdherent
+    gestionAdherent.insert(nom, prenom, datenaissance)
+  File "/home/antony/Documents/python/gestionKendo/kendoDAO/AdherentsDAO.py", line 37, in insert
+    self.session.commit()
+  File "/home/antony/Documents/python/gestionKendo/virtualenv/lib/python3.4/site-packages/sqlalchemy/orm/session.py", line 801, in commit
+    self.transaction.commit()
+  File "/home/antony/Documents/python/gestionKendo/virtualenv/lib/python3.4/site-packages/sqlalchemy/orm/session.py", line 392, in commit
+    self._prepare_impl()
+  File "/home/antony/Documents/python/gestionKendo/virtualenv/lib/python3.4/site-packages/sqlalchemy/orm/session.py", line 372, in _prepare_impl
+    self.session.flush()
+  File "/home/antony/Documents/python/gestionKendo/virtualenv/lib/python3.4/site-packages/sqlalchemy/orm/session.py", line 2019, in flush
+    self._flush(objects)
+  File "/home/antony/Documents/python/gestionKendo/virtualenv/lib/python3.4/site-packages/sqlalchemy/orm/session.py", line 2137, in _flush
+    transaction.rollback(_capture_exception=True)
+  File "/home/antony/Documents/python/gestionKendo/virtualenv/lib/python3.4/site-packages/sqlalchemy/util/langhelpers.py", line 60, in __exit__
+    compat.reraise(exc_type, exc_value, exc_tb)
+  File "/home/antony/Documents/python/gestionKendo/virtualenv/lib/python3.4/site-packages/sqlalchemy/util/compat.py", line 184, in reraise
+    raise value
+  File "/home/antony/Documents/python/gestionKendo/virtualenv/lib/python3.4/site-packages/sqlalchemy/orm/session.py", line 2101, in _flush
+    flush_context.execute()
+  File "/home/antony/Documents/python/gestionKendo/virtualenv/lib/python3.4/site-packages/sqlalchemy/orm/unitofwork.py", line 373, in execute
+    rec.execute(self)
+  File "/home/antony/Documents/python/gestionKendo/virtualenv/lib/python3.4/site-packages/sqlalchemy/orm/unitofwork.py", line 532, in execute
+    uow
+  File "/home/antony/Documents/python/gestionKendo/virtualenv/lib/python3.4/site-packages/sqlalchemy/orm/persistence.py", line 174, in save_obj
+    mapper, table, insert)
+  File "/home/antony/Documents/python/gestionKendo/virtualenv/lib/python3.4/site-packages/sqlalchemy/orm/persistence.py", line 800, in _emit_insert_statements
+    execute(statement, params)
+  File "/home/antony/Documents/python/gestionKendo/virtualenv/lib/python3.4/site-packages/sqlalchemy/engine/base.py", line 914, in execute
+    return meth(self, multiparams, params)
+  File "/home/antony/Documents/python/gestionKendo/virtualenv/lib/python3.4/site-packages/sqlalchemy/sql/elements.py", line 323, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "/home/antony/Documents/python/gestionKendo/virtualenv/lib/python3.4/site-packages/sqlalchemy/engine/base.py", line 1010, in _execute_clauseelement
+    compiled_sql, distilled_params
+  File "/home/antony/Documents/python/gestionKendo/virtualenv/lib/python3.4/site-packages/sqlalchemy/engine/base.py", line 1078, in _execute_context
+    None, None)
+  File "/home/antony/Documents/python/gestionKendo/virtualenv/lib/python3.4/site-packages/sqlalchemy/engine/base.py", line 1341, in _handle_dbapi_exception
+    exc_info
+  File "/home/antony/Documents/python/gestionKendo/virtualenv/lib/python3.4/site-packages/sqlalchemy/util/compat.py", line 200, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "/home/antony/Documents/python/gestionKendo/virtualenv/lib/python3.4/site-packages/sqlalchemy/util/compat.py", line 183, in reraise
+    raise value.with_traceback(tb)
+  File "/home/antony/Documents/python/gestionKendo/virtualenv/lib/python3.4/site-packages/sqlalchemy/engine/base.py", line 1073, in _execute_context
+    context = constructor(dialect, self, conn, *args)
+  File "/home/antony/Documents/python/gestionKendo/virtualenv/lib/python3.4/site-packages/sqlalchemy/engine/default.py", line 584, in _init_compiled
+    param.append(processors[key](compiled_params[key]))
+  File "/home/antony/Documents/python/gestionKendo/virtualenv/lib/python3.4/site-packages/sqlalchemy/dialects/sqlite/base.py", line 607, in process
+    raise TypeError("SQLite DateTime type only accepts Python "
+sqlalchemy.exc.StatementError: (builtins.TypeError) SQLite DateTime type only accepts Python datetime and date objects as input. [SQL: 'INSERT INTO "Adherents" (nom, prenom, "dateNaissance", type) VALUES (?, ?, ?, ?)'] [parameters: [{'nom': 'Marchi', 'prenom': 'Antony', 'type': 'Adherents', 'dateNaissance': '1992-04-14'}]]
+[10/May/2016:15:34:46] ENGINE Keyboard Interrupt: shutting down bus
+[10/May/2016:15:34:46] ENGINE Bus STOPPING
+[10/May/2016:15:34:46] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('127.0.0.1', 8080)) shut down
+[10/May/2016:15:34:46] ENGINE Stopped thread '_TimeoutMonitor'.
+[10/May/2016:15:34:46] ENGINE Bus STOPPED
+[10/May/2016:15:34:46] ENGINE Bus EXITING
+[10/May/2016:15:34:46] ENGINE Bus EXITED
+[10/May/2016:15:34:46] ENGINE Waiting for child threads to terminate...
+[10/May/2016:15:34:48] ENGINE Listening for SIGHUP.
+[10/May/2016:15:34:48] ENGINE Listening for SIGTERM.
+[10/May/2016:15:34:48] ENGINE Listening for SIGUSR1.
+[10/May/2016:15:34:48] ENGINE Bus STARTING
+[10/May/2016:15:34:48] ENGINE Started monitor thread '_TimeoutMonitor'.
+[10/May/2016:15:34:48] ENGINE Serving on http://127.0.0.1:8080
+[10/May/2016:15:34:48] ENGINE Bus STARTED
+[10/May/2016:16:31:22] ENGINE Keyboard Interrupt: shutting down bus
+[10/May/2016:16:31:22] ENGINE Bus STOPPING
+[10/May/2016:16:31:22] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('127.0.0.1', 8080)) shut down
+[10/May/2016:16:31:22] ENGINE Stopped thread '_TimeoutMonitor'.
+[10/May/2016:16:31:22] ENGINE Bus STOPPED
+[10/May/2016:16:31:22] ENGINE Bus EXITING
+[10/May/2016:16:31:22] ENGINE Bus EXITED
+[10/May/2016:16:31:22] ENGINE Waiting for child threads to terminate...
+[10/May/2016:16:41:54] ENGINE Listening for SIGTERM.
+[10/May/2016:16:41:54] ENGINE Listening for SIGHUP.
+[10/May/2016:16:41:54] ENGINE Listening for SIGUSR1.
+[10/May/2016:16:41:54] ENGINE Bus STARTING
+[10/May/2016:16:41:54] ENGINE Started monitor thread '_TimeoutMonitor'.
+[10/May/2016:16:41:54] ENGINE Serving on http://127.0.0.1:8080
+[10/May/2016:16:41:54] ENGINE Bus STARTED
+[10/May/2016:16:57:06] ENGINE Keyboard Interrupt: shutting down bus
+[10/May/2016:16:57:06] ENGINE Bus STOPPING
+[10/May/2016:16:57:06] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('127.0.0.1', 8080)) shut down
+[10/May/2016:16:57:06] ENGINE Stopped thread '_TimeoutMonitor'.
+[10/May/2016:16:57:06] ENGINE Bus STOPPED
+[10/May/2016:16:57:06] ENGINE Bus EXITING
+[10/May/2016:16:57:06] ENGINE Bus EXITED
+[10/May/2016:16:57:06] ENGINE Waiting for child threads to terminate...
+[10/May/2016:16:57:07] ENGINE Listening for SIGTERM.
+[10/May/2016:16:57:07] ENGINE Listening for SIGUSR1.
+[10/May/2016:16:57:07] ENGINE Listening for SIGHUP.
+[10/May/2016:16:57:07] ENGINE Bus STARTING
+[10/May/2016:16:57:07] ENGINE Started monitor thread '_TimeoutMonitor'.
+[10/May/2016:16:57:07] ENGINE Serving on http://127.0.0.1:8080
+[10/May/2016:16:57:07] ENGINE Bus STARTED
+[10/May/2016:16:58:45] ENGINE Keyboard Interrupt: shutting down bus
+[10/May/2016:16:58:45] ENGINE Bus STOPPING
+[10/May/2016:16:58:45] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('127.0.0.1', 8080)) shut down
+[10/May/2016:16:58:45] ENGINE Stopped thread '_TimeoutMonitor'.
+[10/May/2016:16:58:45] ENGINE Bus STOPPED
+[10/May/2016:16:58:45] ENGINE Bus EXITING
+[10/May/2016:16:58:45] ENGINE Bus EXITED
+[10/May/2016:16:58:45] ENGINE Waiting for child threads to terminate...
+[11/May/2016:13:33:55] ENGINE Listening for SIGHUP.
+[11/May/2016:13:33:55] ENGINE Listening for SIGUSR1.
+[11/May/2016:13:33:55] ENGINE Listening for SIGTERM.
+[11/May/2016:13:33:55] ENGINE Bus STARTING
+[11/May/2016:13:33:55] ENGINE Started monitor thread '_TimeoutMonitor'.
+[11/May/2016:13:33:55] ENGINE Serving on http://127.0.0.1:8080
+[11/May/2016:13:33:55] ENGINE Bus STARTED
+[11/May/2016:13:39:08] ENGINE Keyboard Interrupt: shutting down bus
+[11/May/2016:13:39:08] ENGINE Bus STOPPING
+[11/May/2016:13:39:08] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('127.0.0.1', 8080)) shut down
+[11/May/2016:13:39:08] ENGINE Stopped thread '_TimeoutMonitor'.
+[11/May/2016:13:39:08] ENGINE Bus STOPPED
+[11/May/2016:13:39:08] ENGINE Bus EXITING
+[11/May/2016:13:39:08] ENGINE Bus EXITED
+[11/May/2016:13:39:08] ENGINE Waiting for child threads to terminate...
+[11/May/2016:13:39:12] ENGINE Listening for SIGHUP.
+[11/May/2016:13:39:12] ENGINE Listening for SIGTERM.
+[11/May/2016:13:39:12] ENGINE Listening for SIGUSR1.
+[11/May/2016:13:39:12] ENGINE Bus STARTING
+[11/May/2016:13:39:12] ENGINE Started monitor thread '_TimeoutMonitor'.
+[11/May/2016:13:39:12] ENGINE Serving on http://127.0.0.1:8080
+[11/May/2016:13:39:12] ENGINE Bus STARTED
+[11/May/2016:13:41:51] HTTP 
+Traceback (most recent call last):
+  File "/home/antony/Documents/python/gestionKendo/virtualenv/lib/python3.4/site-packages/sqlalchemy/orm/session.py", line 1619, in delete
+    state = attributes.instance_state(instance)
+AttributeError: 'NoneType' object has no attribute '_sa_instance_state'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/antony/Documents/python/gestionKendo/virtualenv/lib/python3.4/site-packages/cherrypy/_cprequest.py", line 670, in respond
+    response.body = self.handler()
+  File "/home/antony/Documents/python/gestionKendo/virtualenv/lib/python3.4/site-packages/cherrypy/lib/encoding.py", line 217, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/home/antony/Documents/python/gestionKendo/virtualenv/lib/python3.4/site-packages/cherrypy/_cpdispatch.py", line 60, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "/home/antony/Documents/python/gestionKendo/index.py", line 100, in supressProfesseur
+    gestionProfesseur.delete(professeur)
+  File "/home/antony/Documents/python/gestionKendo/kendoDAO/ProfesseursDAO.py", line 16, in delete
+    self.session.delete(entity)
+  File "/home/antony/Documents/python/gestionKendo/virtualenv/lib/python3.4/site-packages/sqlalchemy/orm/session.py", line 1621, in delete
+    raise exc.UnmappedInstanceError(instance)
+sqlalchemy.orm.exc.UnmappedInstanceError: Class 'builtins.NoneType' is not mapped
+[11/May/2016:13:42:40] ENGINE Keyboard Interrupt: shutting down bus
+[11/May/2016:13:42:40] ENGINE Bus STOPPING
+[11/May/2016:13:42:40] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('127.0.0.1', 8080)) shut down
+[11/May/2016:13:42:40] ENGINE Stopped thread '_TimeoutMonitor'.
+[11/May/2016:13:42:40] ENGINE Bus STOPPED
+[11/May/2016:13:42:40] ENGINE Bus EXITING
+[11/May/2016:13:42:40] ENGINE Bus EXITED
+[11/May/2016:13:42:40] ENGINE Waiting for child threads to terminate...
+[11/May/2016:13:42:42] ENGINE Listening for SIGUSR1.
+[11/May/2016:13:42:42] ENGINE Listening for SIGHUP.
+[11/May/2016:13:42:42] ENGINE Listening for SIGTERM.
+[11/May/2016:13:42:42] ENGINE Bus STARTING
+[11/May/2016:13:42:42] ENGINE Started monitor thread '_TimeoutMonitor'.
+[11/May/2016:13:42:42] ENGINE Serving on http://127.0.0.1:8080
+[11/May/2016:13:42:42] ENGINE Bus STARTED
+[11/May/2016:15:55:05] ENGINE Keyboard Interrupt: shutting down bus
+[11/May/2016:15:55:05] ENGINE Bus STOPPING
+[11/May/2016:15:55:05] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('127.0.0.1', 8080)) shut down
+[11/May/2016:15:55:05] ENGINE Stopped thread '_TimeoutMonitor'.
+[11/May/2016:15:55:05] ENGINE Bus STOPPED
+[11/May/2016:15:55:05] ENGINE Bus EXITING
+[11/May/2016:15:55:05] ENGINE Bus EXITED
+[11/May/2016:15:55:05] ENGINE Waiting for child threads to terminate...
+[11/May/2016:15:55:09] ENGINE Listening for SIGHUP.
+[11/May/2016:15:55:09] ENGINE Listening for SIGTERM.
+[11/May/2016:15:55:09] ENGINE Listening for SIGUSR1.
+[11/May/2016:15:55:09] ENGINE Bus STARTING
+[11/May/2016:15:55:09] ENGINE Started monitor thread '_TimeoutMonitor'.
+[11/May/2016:15:55:09] ENGINE Serving on http://127.0.0.1:8080
+[11/May/2016:15:55:09] ENGINE Bus STARTED
+[11/May/2016:16:00:29] ENGINE Keyboard Interrupt: shutting down bus
+[11/May/2016:16:00:29] ENGINE Bus STOPPING
+[11/May/2016:16:00:29] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('127.0.0.1', 8080)) shut down
+[11/May/2016:16:00:29] ENGINE Stopped thread '_TimeoutMonitor'.
+[11/May/2016:16:00:29] ENGINE Bus STOPPED
+[11/May/2016:16:00:29] ENGINE Bus EXITING
+[11/May/2016:16:00:29] ENGINE Bus EXITED
+[11/May/2016:16:00:29] ENGINE Waiting for child threads to terminate...
+[11/May/2016:16:00:33] ENGINE Listening for SIGHUP.
+[11/May/2016:16:00:33] ENGINE Listening for SIGUSR1.
+[11/May/2016:16:00:33] ENGINE Listening for SIGTERM.
+[11/May/2016:16:00:33] ENGINE Bus STARTING
+[11/May/2016:16:00:33] ENGINE Started monitor thread '_TimeoutMonitor'.
+[11/May/2016:16:00:33] ENGINE Serving on http://127.0.0.1:8080
+[11/May/2016:16:00:33] ENGINE Bus STARTED
+[11/May/2016:16:00:47] HTTP 
+Traceback (most recent call last):
+  File "/home/antony/Documents/python/gestionKendo/virtualenv/lib/python3.4/site-packages/cherrypy/_cprequest.py", line 670, in respond
+    response.body = self.handler()
+  File "/home/antony/Documents/python/gestionKendo/virtualenv/lib/python3.4/site-packages/cherrypy/lib/encoding.py", line 217, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/home/antony/Documents/python/gestionKendo/virtualenv/lib/python3.4/site-packages/cherrypy/_cpdispatch.py", line 60, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "/home/antony/Documents/python/gestionKendo/index.py", line 41, in index
+    return _pageListAdherents.render(adherents=gestionadherent.findAll())
+  File "/home/antony/Documents/python/gestionKendo/virtualenv/lib/python3.4/site-packages/mako/template.py", line 445, in render
+    return runtime._render(self, self.callable_, args, data)
+  File "/home/antony/Documents/python/gestionKendo/virtualenv/lib/python3.4/site-packages/mako/runtime.py", line 829, in _render
+    **_kwargs_for_callable(callable_, data))
+  File "/home/antony/Documents/python/gestionKendo/virtualenv/lib/python3.4/site-packages/mako/runtime.py", line 864, in _render_context
+    _exec_template(inherit, lclcontext, args=args, kwargs=kwargs)
+  File "/home/antony/Documents/python/gestionKendo/virtualenv/lib/python3.4/site-packages/mako/runtime.py", line 890, in _exec_template
+    callable_(context, *args, **kwargs)
+  File "/home/antony/Documents/python/gestionKendo/web/views/templates/mako_modules/base.mako.html.py", line 25, in render_body
+    context['self'].container(**pageargs)
+  File "/home/antony/Documents/python/gestionKendo/web/views/templates/mako_modules/adherents.mako.html.py", line 65, in render_container
+    __M_writer(str(professeur.licence))
+AttributeError: 'Undefined' object has no attribute 'licence'
+[11/May/2016:16:00:56] HTTP 
+Traceback (most recent call last):
+  File "/home/antony/Documents/python/gestionKendo/virtualenv/lib/python3.4/site-packages/cherrypy/_cprequest.py", line 670, in respond
+    response.body = self.handler()
+  File "/home/antony/Documents/python/gestionKendo/virtualenv/lib/python3.4/site-packages/cherrypy/lib/encoding.py", line 217, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/home/antony/Documents/python/gestionKendo/virtualenv/lib/python3.4/site-packages/cherrypy/_cpdispatch.py", line 60, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "/home/antony/Documents/python/gestionKendo/index.py", line 41, in index
+    return _pageListAdherents.render(adherents=gestionadherent.findAll())
+  File "/home/antony/Documents/python/gestionKendo/virtualenv/lib/python3.4/site-packages/mako/template.py", line 445, in render
+    return runtime._render(self, self.callable_, args, data)
+  File "/home/antony/Documents/python/gestionKendo/virtualenv/lib/python3.4/site-packages/mako/runtime.py", line 829, in _render
+    **_kwargs_for_callable(callable_, data))
+  File "/home/antony/Documents/python/gestionKendo/virtualenv/lib/python3.4/site-packages/mako/runtime.py", line 864, in _render_context
+    _exec_template(inherit, lclcontext, args=args, kwargs=kwargs)
+  File "/home/antony/Documents/python/gestionKendo/virtualenv/lib/python3.4/site-packages/mako/runtime.py", line 890, in _exec_template
+    callable_(context, *args, **kwargs)
+  File "/home/antony/Documents/python/gestionKendo/web/views/templates/mako_modules/base.mako.html.py", line 25, in render_body
+    context['self'].container(**pageargs)
+  File "/home/antony/Documents/python/gestionKendo/web/views/templates/mako_modules/adherents.mako.html.py", line 65, in render_container
+    __M_writer(str(professeur.licence))
+AttributeError: 'Undefined' object has no attribute 'licence'
+[11/May/2016:16:01:31] HTTP 
+Traceback (most recent call last):
+  File "/home/antony/Documents/python/gestionKendo/virtualenv/lib/python3.4/site-packages/cherrypy/_cprequest.py", line 670, in respond
+    response.body = self.handler()
+  File "/home/antony/Documents/python/gestionKendo/virtualenv/lib/python3.4/site-packages/cherrypy/lib/encoding.py", line 217, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/home/antony/Documents/python/gestionKendo/virtualenv/lib/python3.4/site-packages/cherrypy/_cpdispatch.py", line 60, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "/home/antony/Documents/python/gestionKendo/index.py", line 41, in index
+    return _pageListAdherents.render(adherents=gestionadherent.findAll())
+  File "/home/antony/Documents/python/gestionKendo/virtualenv/lib/python3.4/site-packages/mako/template.py", line 445, in render
+    return runtime._render(self, self.callable_, args, data)
+  File "/home/antony/Documents/python/gestionKendo/virtualenv/lib/python3.4/site-packages/mako/runtime.py", line 829, in _render
+    **_kwargs_for_callable(callable_, data))
+  File "/home/antony/Documents/python/gestionKendo/virtualenv/lib/python3.4/site-packages/mako/runtime.py", line 864, in _render_context
+    _exec_template(inherit, lclcontext, args=args, kwargs=kwargs)
+  File "/home/antony/Documents/python/gestionKendo/virtualenv/lib/python3.4/site-packages/mako/runtime.py", line 890, in _exec_template
+    callable_(context, *args, **kwargs)
+  File "/home/antony/Documents/python/gestionKendo/web/views/templates/mako_modules/base.mako.html.py", line 25, in render_body
+    context['self'].container(**pageargs)
+  File "/home/antony/Documents/python/gestionKendo/web/views/templates/mako_modules/adherents.mako.html.py", line 65, in render_container
+    __M_writer(str(professeur.licence))
+AttributeError: 'Undefined' object has no attribute 'licence'
+[11/May/2016:16:01:53] ENGINE Keyboard Interrupt: shutting down bus
+[11/May/2016:16:01:53] ENGINE Bus STOPPING
+[11/May/2016:16:01:53] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('127.0.0.1', 8080)) shut down
+[11/May/2016:16:01:53] ENGINE Stopped thread '_TimeoutMonitor'.
+[11/May/2016:16:01:53] ENGINE Bus STOPPED
+[11/May/2016:16:01:53] ENGINE Bus EXITING
+[11/May/2016:16:01:53] ENGINE Bus EXITED
+[11/May/2016:16:01:53] ENGINE Waiting for child threads to terminate...
+[11/May/2016:16:01:54] ENGINE Listening for SIGTERM.
+[11/May/2016:16:01:54] ENGINE Listening for SIGUSR1.
+[11/May/2016:16:01:54] ENGINE Listening for SIGHUP.
+[11/May/2016:16:01:54] ENGINE Bus STARTING
+[11/May/2016:16:01:54] ENGINE Started monitor thread '_TimeoutMonitor'.
+[11/May/2016:16:01:54] ENGINE Serving on http://127.0.0.1:8080
+[11/May/2016:16:01:54] ENGINE Bus STARTED
+[11/May/2016:16:02:23] HTTP 
+Traceback (most recent call last):
+  File "/home/antony/Documents/python/gestionKendo/virtualenv/lib/python3.4/site-packages/cherrypy/_cprequest.py", line 670, in respond
+    response.body = self.handler()
+  File "/home/antony/Documents/python/gestionKendo/virtualenv/lib/python3.4/site-packages/cherrypy/lib/encoding.py", line 217, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/home/antony/Documents/python/gestionKendo/virtualenv/lib/python3.4/site-packages/cherrypy/_cpdispatch.py", line 60, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "/home/antony/Documents/python/gestionKendo/index.py", line 109, in supressAdherent
+    gestionAdherent.delete(adherent)
+AttributeError: 'AdherentsDAO' object has no attribute 'delete'
+[11/May/2016:17:28:33] ENGINE Keyboard Interrupt: shutting down bus
+[11/May/2016:17:28:33] ENGINE Bus STOPPING
+[11/May/2016:17:28:33] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('127.0.0.1', 8080)) shut down
+[11/May/2016:17:28:33] ENGINE Stopped thread '_TimeoutMonitor'.
+[11/May/2016:17:28:33] ENGINE Bus STOPPED
+[11/May/2016:17:28:33] ENGINE Bus EXITING
+[11/May/2016:17:28:33] ENGINE Bus EXITED
+[11/May/2016:17:28:33] ENGINE Waiting for child threads to terminate...
+[11/May/2016:23:15:45] ENGINE Listening for SIGUSR1.
+[11/May/2016:23:15:45] ENGINE Listening for SIGHUP.
+[11/May/2016:23:15:45] ENGINE Listening for SIGTERM.
+[11/May/2016:23:15:45] ENGINE Bus STARTING
+[11/May/2016:23:15:45] ENGINE Started monitor thread '_TimeoutMonitor'.
+[11/May/2016:23:15:45] ENGINE Serving on http://127.0.0.1:8080
+[11/May/2016:23:15:45] ENGINE Bus STARTED
+[11/May/2016:23:15:51] HTTP 
+Traceback (most recent call last):
+  File "/home/antony/Documents/python/gestionKendo/virtualenv/lib/python3.4/site-packages/cherrypy/_cprequest.py", line 670, in respond
+    response.body = self.handler()
+  File "/home/antony/Documents/python/gestionKendo/virtualenv/lib/python3.4/site-packages/cherrypy/lib/encoding.py", line 217, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/home/antony/Documents/python/gestionKendo/virtualenv/lib/python3.4/site-packages/cherrypy/_cpdispatch.py", line 60, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "/home/antony/Documents/python/gestionKendo/index.py", line 52, in detailsAdherent
+    grades=serviceAdherent.adherent.grades)
+  File "/home/antony/Documents/python/gestionKendo/virtualenv/lib/python3.4/site-packages/mako/template.py", line 445, in render
+    return runtime._render(self, self.callable_, args, data)
+  File "/home/antony/Documents/python/gestionKendo/virtualenv/lib/python3.4/site-packages/mako/runtime.py", line 829, in _render
+    **_kwargs_for_callable(callable_, data))
+  File "/home/antony/Documents/python/gestionKendo/virtualenv/lib/python3.4/site-packages/mako/runtime.py", line 864, in _render_context
+    _exec_template(inherit, lclcontext, args=args, kwargs=kwargs)
+  File "/home/antony/Documents/python/gestionKendo/virtualenv/lib/python3.4/site-packages/mako/runtime.py", line 890, in _exec_template
+    callable_(context, *args, **kwargs)
+  File "/home/antony/Documents/python/gestionKendo/web/views/templates/mako_modules/base.mako.html.py", line 25, in render_body
+    context['self'].container(**pageargs)
+  File "/home/antony/Documents/python/gestionKendo/web/views/templates/mako_modules/details.adherent.mako.html.py", line 69, in render_container
+    __M_writer(str(professeur.licence))
+AttributeError: 'Undefined' object has no attribute 'licence'
+[11/May/2016:23:16:22] ENGINE Keyboard Interrupt: shutting down bus
+[11/May/2016:23:16:22] ENGINE Bus STOPPING
+[11/May/2016:23:16:22] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('127.0.0.1', 8080)) shut down
+[11/May/2016:23:16:22] ENGINE Stopped thread '_TimeoutMonitor'.
+[11/May/2016:23:16:22] ENGINE Bus STOPPED
+[11/May/2016:23:16:22] ENGINE Bus EXITING
+[11/May/2016:23:16:22] ENGINE Bus EXITED
+[11/May/2016:23:16:22] ENGINE Waiting for child threads to terminate...
+[11/May/2016:23:16:23] ENGINE Listening for SIGTERM.
+[11/May/2016:23:16:23] ENGINE Listening for SIGHUP.
+[11/May/2016:23:16:23] ENGINE Listening for SIGUSR1.
+[11/May/2016:23:16:23] ENGINE Bus STARTING
+[11/May/2016:23:16:23] ENGINE Started monitor thread '_TimeoutMonitor'.
+[11/May/2016:23:16:23] ENGINE Serving on http://127.0.0.1:8080
+[11/May/2016:23:16:23] ENGINE Bus STARTED
+[11/May/2016:23:17:04] ENGINE Keyboard Interrupt: shutting down bus
+[11/May/2016:23:17:04] ENGINE Bus STOPPING
+[11/May/2016:23:17:04] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('127.0.0.1', 8080)) shut down
+[11/May/2016:23:17:04] ENGINE Stopped thread '_TimeoutMonitor'.
+[11/May/2016:23:17:04] ENGINE Bus STOPPED
+[11/May/2016:23:17:04] ENGINE Bus EXITING
+[11/May/2016:23:17:04] ENGINE Bus EXITED
+[11/May/2016:23:17:04] ENGINE Waiting for child threads to terminate...
+[11/May/2016:23:17:05] ENGINE Listening for SIGTERM.
+[11/May/2016:23:17:05] ENGINE Listening for SIGHUP.
+[11/May/2016:23:17:05] ENGINE Listening for SIGUSR1.
+[11/May/2016:23:17:05] ENGINE Bus STARTING
+[11/May/2016:23:17:05] ENGINE Started monitor thread '_TimeoutMonitor'.
+[11/May/2016:23:17:05] ENGINE Serving on http://127.0.0.1:8080
+[11/May/2016:23:17:05] ENGINE Bus STARTED
+[11/May/2016:23:24:31] ENGINE Keyboard Interrupt: shutting down bus
+[11/May/2016:23:24:31] ENGINE Bus STOPPING
+[11/May/2016:23:24:31] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('127.0.0.1', 8080)) shut down
+[11/May/2016:23:24:31] ENGINE Stopped thread '_TimeoutMonitor'.
+[11/May/2016:23:24:31] ENGINE Bus STOPPED
+[11/May/2016:23:24:31] ENGINE Bus EXITING
+[11/May/2016:23:24:31] ENGINE Bus EXITED
+[11/May/2016:23:24:31] ENGINE Waiting for child threads to terminate...

@@ -7,7 +7,6 @@ import cherrypy
 from kendoDAO.ProfesseursDAO import ProfesseursDAO
 from mako.lookup import TemplateLookup
 from kendoDAO.AdherentsDAO import AdherentsDAO
-from models import Diplome
 from service.ServiceAdherent import ServiceAdherent
 from service.ServiceProfesseur import ServiceProfesseur
 
@@ -66,6 +65,70 @@ class HelloWorld(object):
         serviceProfesseur = ServiceProfesseur(gestionProfesseur.findById(licence))
         serviceProfesseur.ajouterDiplomeWithAllInfo(libelle, datetime.strptime(date,"%Y-%m-%d"))
         return self.detailsProfesseur(licence)
+
+    @cherrypy.expose
+    def ajoutGradeAdherent(self, licence, libelle, date):
+        gestionAdherent = AdherentsDAO()
+        serviceAdherent = ServiceAdherent(gestionAdherent.findById(licence))
+        serviceAdherent.ajouterGradeWithAllInfo(libelle, datetime.strptime(date, "%Y-%m-%d"))
+        return self.detailsAdherent(licence)
+
+    @cherrypy.expose
+    def ajoutGradeProf(self, licence, libelle, date):
+        gestionAdherent = AdherentsDAO()
+        serviceAdherent = ServiceAdherent(gestionAdherent.findById(licence))
+        serviceAdherent.ajouterGradeWithAllInfo(libelle, datetime.strptime(date,"%Y-%m-%d"))
+        return self.detailsProfesseur(licence)
+
+    @cherrypy.expose
+    def ajoutAdherent(self, prenom, nom, datenaissance):
+        gestionAdherent = AdherentsDAO()
+        gestionAdherent.insert(nom, prenom, datetime.strptime(datenaissance,"%Y-%m-%d"))
+        return self.index()
+
+    @cherrypy.expose
+    def ajoutProfesseur(self, prenom, nom, datenaissance):
+        gestionProfesseur = ProfesseursDAO()
+        gestionProfesseur.insert(nom, prenom, datetime.strptime(datenaissance,"%Y-%m-%d"))
+        return self.professeurs()
+
+    @cherrypy.expose
+    def supressProfesseur(self, licence):
+        gestionProfesseur = ProfesseursDAO()
+        professeur = gestionProfesseur.findById(licence)
+        if professeur is not None:
+            gestionProfesseur.delete(professeur)
+        return self.professeurs()
+
+    @cherrypy.expose
+    def supressAdherent(self, licence):
+        gestionAdherent = AdherentsDAO()
+        adherent = gestionAdherent.findById(licence)
+        if adherent is not None:
+            gestionAdherent.delete(adherent)
+        return self.index()
+
+    @cherrypy.expose
+    def supressGrade(self, licence, idGrade):
+        gestionAdherent = AdherentsDAO()
+        serviceAdherent = ServiceAdherent(gestionAdherent.findById(licence))
+        serviceAdherent.supprimerGrade(idGrade)
+        return self.detailsAdherent(licence)
+
+    @cherrypy.expose
+    def supressGradeProf(self, licence, idGrade):
+        gestionAdherent = AdherentsDAO()
+        serviceAdherent = ServiceAdherent(gestionAdherent.findById(licence))
+        serviceAdherent.supprimerGrade(idGrade)
+        return self.detailsProfesseur(licence)
+
+    @cherrypy.expose
+    def supressDiplome(self, licence, idDiplome):
+        gestionProfesseur = ProfesseursDAO()
+        serviceProfesseur = ServiceProfesseur(gestionProfesseur.findById(licence))
+        serviceProfesseur.supprimerGrade(idDiplome)
+        return self.detailsProfesseur(licence)
+
 
 
 if __name__ == '__main__':

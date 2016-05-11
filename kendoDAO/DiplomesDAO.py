@@ -25,3 +25,7 @@ class DiplomesDAO(DAO):
     def insertObject(self, diplome):
         self.session.add(diplome)
         self.session.commit()
+
+    def findById(self, id):
+        return self.session.query(Diplome).filter(Diplome.id == id).one_or_none()
+

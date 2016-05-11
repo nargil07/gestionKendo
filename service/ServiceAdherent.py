@@ -1,6 +1,6 @@
 from kendoDAO.AdherentsDAO import AdherentsDAO
 from kendoDAO.GradesDAO import GradesDAO
-from models import Adherent
+from models import Adherent, Grade
 
 """
 Cette classe a pour utilité de gerer un adherent.
@@ -26,5 +26,13 @@ class ServiceAdherent():
     """
     def ajouterGrade(self, libelleGrade):
         self.gradeDAO.insertGrade(libelleGrade, self.adherent.licence)
+
+    def ajouterGradeWithAllInfo(self, libelle, date):
+        grade = Grade(libelle, self.adherent.licence, date)
+        self.gradeDAO.insertObject(grade)
+
+    def supprimerGrade(self, id):
+        grade = self.gradeDAO.findById(id)
+        self.gradeDAO.delete(grade)
 
 

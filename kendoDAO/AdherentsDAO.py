@@ -36,7 +36,6 @@ class AdherentsDAO(DAO):
         self.session.add(adherent)
         self.session.commit()
 
-
     def findById(self, id):
         """
         Permet de recuperer un etudiant

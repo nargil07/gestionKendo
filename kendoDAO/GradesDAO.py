@@ -15,7 +15,15 @@ class GradesDAO(DAO):
         for grade in self.session.query(Grade).filter(Grade.idAdherent == idAdherent):
             grades.append(grade)
         return grades
-    def insertGrade(self, libelle, idAdherent):
+
+    def insert(self, libelle, idAdherent):
         grade = Grade(libelle, idAdherent, date.today())
         self.session.add(grade)
         self.session.commit()
+
+    def insertObject(self, grade):
+        self.session.add(grade)
+        self.session.commit()
+
+    def findById(self, id):
+        return self.session.query(Grade).filter(Grade.id == id).one_or_none()

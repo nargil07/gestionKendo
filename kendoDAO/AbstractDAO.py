@@ -9,3 +9,7 @@ class DAO():
             self.session = Session()
         except Exception as err:
             raise Exception(err.message)
+
+    def delete(self, entity):
+        self.session.delete(entity)
+        self.session.commit()

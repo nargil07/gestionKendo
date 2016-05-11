@@ -17,11 +17,33 @@
                             <div class="panel panel-default">
                                 <div class="panel-heading">
                                     Grades
+                                    <span class="glyphicon glyphicon-plus pull-right plus-button" aria-hidden="true"
+                                          data-toggle="modal" data-target="#addGrade"></span>
                                 </div>
                                 <div class="panel-body">
-                                    %for grade in grades:
-                                    <p>${grade.libelle}</p>
-                                    %endfor
+                                    <table class="col-lg-12">
+                                        <thead>
+                                        <th>Libelle</th>
+                                        <th>Date</th>
+                                        <th>Action</th>
+                                        </thead>
+                                        <tbody>
+                                        %for grade in grades:
+                                        <tr>
+                                            <td>${grade.libelle}</td>
+                                            <td>${grade.dateObtention}</td>
+                                            <td>
+                                                <form action="supressGradeProf" method="post">
+                                                    <input name="licence" type="hidden" value="${professeur.licence}"/>
+                                                    <input name="idGrade" type="hidden" value="${grade.id}"/>
+                                                    <input type="submit" value="Supprimer"/>
+                                                </form>
+                                            </td>
+                                        </tr>
+                                        %endfor
+                                        </tbody>
+                                    </table>
+
                                 </div>
                             </div>
                         </div>
@@ -35,9 +57,28 @@
                                           data-toggle="modal" data-target="#addDiplome"></span>
                                 </div>
                                 <div class="panel-body">
-                                    %for diplome in diplomes:
-                                    <p>${diplome.libelle}</p>
-                                    %endfor
+                                    <table class="col-lg-12">
+                                        <thead>
+                                        <th>Libelle</th>
+                                        <th>Date</th>
+                                        <th>Action</th>
+                                        </thead>
+                                        <tbody>
+                                        %for diplome in diplomes:
+                                        <tr>
+                                            <td>${diplome.libelle}</td>
+                                            <td>${diplome.dateObtention}</td>
+                                            <td>
+                                                <form action="supressGradeProf" method="post">
+                                                    <input name="licence" type="hidden" value="${professeur.licence}"/>
+                                                    <input name="idGrade" type="hidden" value="${diplome.id}"/>
+                                                    <input type="submit" value="Supprimer"/>
+                                                </form>
+                                            </td>
+                                        </tr>
+                                        %endfor
+                                        </tbody>
+                                    </table>
                                 </div>
                             </div>
                         </div>
@@ -48,7 +89,7 @@
         </div>
     </div>
 </div>
-<!-- Modal Ajout telephone -->
+<!-- Modal Ajout Diplome -->
 <div class="modal fade" id="addDiplome" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
@@ -56,7 +97,29 @@
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
                             aria-hidden="true">&times;</span></button>
-                    <h4 class="modal-title" id="myModalLabel">Ajout d'un diplomes</h4>
+                    <h4 class="modal-title">Ajout d'un diplomes</h4>
+                </div>
+                <div class="modal-body">
+                    <input type="hidden" name="licence" value="${professeur.licence}">
+                    <input type="text" name="libelle">
+                    <input type="date" name="date">
+                </div>
+                <div class="modal-footer">
+                    <input type="submit" class="btn btn-primary" value="Valider">
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<!-- Modal Ajout grade -->
+<div class="modal fade" id="addGrade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <form action="ajoutGradeProf">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                            aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">Ajout d'un grade</h4>
                 </div>
                 <div class="modal-body">
                     <input type="hidden" name="licence" value="${professeur.licence}">

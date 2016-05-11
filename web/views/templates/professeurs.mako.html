@@ -2,11 +2,13 @@
 <%block name="container">
 <div class="row">
     <div class="col-lg-12">
-        <div class="col-lg-2"></div>
-        <div class="col-lg-8">
+        <div class="col-lg-3"></div>
+        <div class="col-lg-6">
             <div class="panel panel-default">
                 <div class="panel-heading">
                     Les professeurs
+                    <span class="glyphicon glyphicon-plus pull-right plus-button" aria-hidden="true"
+                          data-toggle="modal" data-target="#addProfesseur"></span>
                 </div>
                 <div class="panel-body">
                     <table class="col-lg-12">
@@ -19,15 +21,21 @@
                         <tbody>
                         %for professeur in professeurs:
                         <tr>
-                            <form action="detailsProfesseur">
-                                <td>${professeur.nom}</td>
-                                <td>${professeur.prenom}</td>
-                                <td>${professeur.dateNaissance}</td>
-                                <td>
+
+                            <td>${professeur.nom}</td>
+                            <td>${professeur.prenom}</td>
+                            <td>${professeur.dateNaissance}</td>
+                            <td>
+                                <form action="detailsProfesseur">
                                     <input type="hidden" name="licence" value="${professeur.licence}">
                                     <input type="submit" value="Afficher detail">
-                                </td>
-                            </form>
+                                </form>
+                                <form action="supressProfesseur">
+                                    <input type="hidden" name="licence" value="${professeur.licence}">
+                                    <input type="submit" value="Supprimer">
+                                </form>
+                            </td>
+
                         </tr>
                         %endfor
                         </tbody>
@@ -36,7 +44,29 @@
                 </div>
             </div>
         </div>
-        <div class="col-lg-2"></div>
+        <div class="col-lg-3"></div>
+    </div>
+</div>
+<!-- Modal Ajout grade -->
+<div class="modal fade" id="addProfesseur" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <form action="ajoutProfesseur" method="post">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                            aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">Ajout d'un professeur</h4>
+                </div>
+                <div class="modal-body">
+                    <input type="text" name="prenom">
+                    <input type="text" name="nom">
+                    <input type="date" name="datenaissance">
+                </div>
+                <div class="modal-footer">
+                    <input type="submit" class="btn btn-primary" value="Valider">
+                </div>
+            </form>
+        </div>
     </div>
 </div>
 </%block>
