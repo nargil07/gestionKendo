@@ -36,3 +36,10 @@ class ServiceProfesseur():
     def supprimerDiplome(self, id):
         diplome = self.diplomesDAO.findById(id)
         self.diplomesDAO.delete(diplome)
+
+    def modifierProfesseur(self, nom, prenom, datenaissance):
+        self.professeur.nom = nom
+        self.professeur.prenom = prenom
+        self.professeur.dateNaissance = datenaissance
+        self.professeurDAO.update(self.professeur)
+

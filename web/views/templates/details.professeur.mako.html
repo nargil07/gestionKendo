@@ -7,6 +7,8 @@
             <div class="panel panel-default">
                 <div class="panel-heading">
                     Professeur
+                    <span class="glyphicon glyphicon-pencil pull-right plus-button" aria-hidden="true"
+                                          data-toggle="modal" data-target="#modifier"></span>
                 </div>
                 <div class="panel-body">
                     <p>Nom : ${professeur.nom}</p>
@@ -101,8 +103,14 @@
                 </div>
                 <div class="modal-body">
                     <input type="hidden" name="licence" value="${professeur.licence}">
-                    <input type="text" name="libelle">
-                    <input type="date" name="date">
+                    <div class="input-group">
+                        <span class="input-group-addon">Libelle</span>
+                        <input type="text" name="libelle" class="form-control" placeholder="Libelle">
+                    </div>
+                    <div class="input-group">
+                        <span class="input-group-addon">Date Obtention</span>
+                        <input type="date" name="date" class="form-control" placeholder="YYYY-MM-DD">
+                    </div>
                 </div>
                 <div class="modal-footer">
                     <input type="submit" class="btn btn-primary" value="Valider">
@@ -123,8 +131,46 @@
                 </div>
                 <div class="modal-body">
                     <input type="hidden" name="licence" value="${professeur.licence}">
-                    <input type="text" name="libelle">
-                    <input type="date" name="date">
+                    <div class="input-group">
+                        <span class="input-group-addon">Libelle</span>
+                        <input type="text" name="libelle" class="form-control" placeholder="Libelle">
+                    </div>
+                    <div class="input-group">
+                        <span class="input-group-addon">Date Obtention</span>
+                        <input type="date" name="date" class="form-control" placeholder="YYYY-MM-DD">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <input type="submit" class="btn btn-primary" value="Valider">
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<!-- Modal modif prof -->
+<div class="modal fade" id="modifier" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <form action="modifierProfesseur">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                            aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">Modification professeur</h4>
+                </div>
+                <div class="modal-body">
+                    <input type="hidden" name="licence" value="${professeur.licence}">
+                    <div class="input-group">
+                        <span class="input-group-addon">Nom</span>
+                        <input type="text" name="nom" class="form-control" placeholder="Nom" value="${professeur.nom}">
+                    </div>
+                    <div class="input-group">
+                        <span class="input-group-addon">Prenom</span>
+                        <input type="text" name="prenom" class="form-control" placeholder="Prenom" value="${professeur.prenom}">
+                    </div>
+                    <div class="input-group">
+                        <span class="input-group-addon">Date Naissance</span>
+                        <input type="date" name="datenaissance" class="form-control" placeholder="YYYY-MM-DD" value="${professeur.dateNaissance}">
+                    </div>
                 </div>
                 <div class="modal-footer">
                     <input type="submit" class="btn btn-primary" value="Valider">

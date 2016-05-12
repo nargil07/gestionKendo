@@ -58,9 +58,18 @@
                     <h4 class="modal-title">Ajout d'un professeur</h4>
                 </div>
                 <div class="modal-body">
-                    <input type="text" name="prenom">
-                    <input type="text" name="nom">
-                    <input type="date" name="datenaissance">
+                    <div class="input-group">
+                        <span class="input-group-addon">Nom</span>
+                        <input type="text" name="nom" class="form-control" placeholder="Nom" required>
+                    </div>
+                    <div class="input-group">
+                        <span class="input-group-addon">Prenom</span>
+                        <input type="text" name="prenom" class="form-control" placeholder="Prenom" required>
+                    </div>
+                    <div class="input-group">
+                        <span class="input-group-addon">Date Naissance</span>
+                        <input type="date" name="datenaissance" class="form-control" placeholder="YYYY-MM-DD" required>
+                    </div>
                 </div>
                 <div class="modal-footer">
                     <input type="submit" class="btn btn-primary" value="Valider">

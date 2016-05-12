@@ -129,6 +129,20 @@ class HelloWorld(object):
         serviceProfesseur.supprimerGrade(idDiplome)
         return self.detailsProfesseur(licence)
 
+    @cherrypy.expose
+    def modifierProfesseur(self, licence, nom, prenom, datenaissance):
+        gestionProfesseur = ProfesseursDAO()
+        serviceProfesseur = ServiceProfesseur(gestionProfesseur.findById(licence))
+        serviceProfesseur.modifierProfesseur(nom, prenom, datetime.strptime(datenaissance,"%Y-%m-%d"))
+        return self.detailsProfesseur(licence)
+
+    @cherrypy.expose
+    def modifierAdherent(self, licence, nom, prenom, datenaissance):
+        gestionAdherent = AdherentsDAO()
+        serviceAdherent = ServiceAdherent(gestionAdherent.findById(licence))
+        serviceAdherent.modifierProfesseur(nom, prenom, datetime.strptime(datenaissance,"%Y-%m-%d"))
+        return self.detailsProfesseur(licence)
+
 
 
 if __name__ == '__main__':

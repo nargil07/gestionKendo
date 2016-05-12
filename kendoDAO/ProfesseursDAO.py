@@ -21,3 +21,10 @@ class ProfesseursDAO(DAO):
         professeur = Professeur(nom, prenom, dateNaissance, licence)
         self.session.add(professeur)
         self.session.commit()
+
+    def update(self, entity):
+        entityToUpdate = self.findById(entity.licence)
+        entityToUpdate.nom = entity.nom
+        entityToUpdate.prenom = entity.prenom
+        entityToUpdate.dateNaissance = entity.dateNaissance
+        self.session.commit()

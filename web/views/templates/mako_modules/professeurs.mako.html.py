@@ -5,7 +5,7 @@ STOP_RENDERING = runtime.STOP_RENDERING
 __M_dict_builtin = dict
 __M_locals_builtin = locals
 _magic_number = 10
-_modified_time = 1462966752.7861912
+_modified_time = 1463050052.4908047
 _enable_loop = True
 _template_filename = '/home/antony/Documents/python/gestionKendo/web/views/templates/professeurs.mako.html'
 _template_uri = 'professeurs.mako.html'
@@ -28,9 +28,9 @@ def render_body(context,**pageargs):
     __M_caller = context.caller_stack._push_frame()
     try:
         __M_locals = __M_dict_builtin(pageargs=pageargs)
-        professeurs = context.get('professeurs', UNDEFINED)
         def container():
             return render_container(context._locals(__M_locals))
+        professeurs = context.get('professeurs', UNDEFINED)
         __M_writer = context.writer()
         __M_writer('\n')
         if 'parent' not in context._data or not hasattr(context._data['parent'], 'container'):
@@ -45,9 +45,9 @@ def render_body(context,**pageargs):
 def render_container(context,**pageargs):
     __M_caller = context.caller_stack._push_frame()
     try:
-        professeurs = context.get('professeurs', UNDEFINED)
         def container():
             return render_container(context)
+        professeurs = context.get('professeurs', UNDEFINED)
         __M_writer = context.writer()
         __M_writer('\n<div class="row">\n    <div class="col-lg-12">\n        <div class="col-lg-3"></div>\n        <div class="col-lg-6">\n            <div class="panel panel-default">\n                <div class="panel-heading">\n                    Les professeurs\n                    <span class="glyphicon glyphicon-plus pull-right plus-button" aria-hidden="true"\n                          data-toggle="modal" data-target="#addProfesseur"></span>\n                </div>\n                <div class="panel-body">\n                    <table class="col-lg-12">\n                        <thead>\n                        <th>Nom</th>\n                        <th>Prenom</th>\n                        <th>Date de naissance</th>\n                        <th>Action</th>\n                        </thead>\n                        <tbody>\n')
         for professeur in professeurs:
@@ -62,7 +62,7 @@ def render_container(context,**pageargs):
             __M_writer('">\n                                    <input type="submit" value="Afficher detail">\n                                </form>\n                                <form action="supressProfesseur">\n                                    <input type="hidden" name="licence" value="')
             __M_writer(str(professeur.licence))
             __M_writer('">\n                                    <input type="submit" value="Supprimer">\n                                </form>\n                            </td>\n\n                        </tr>\n')
-        __M_writer('                        </tbody>\n\n                    </table>\n                </div>\n            </div>\n        </div>\n        <div class="col-lg-3"></div>\n    </div>\n</div>\n<!-- Modal Ajout grade -->\n<div class="modal fade" id="addProfesseur" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">\n    <div class="modal-dialog" role="document">\n        <div class="modal-content">\n            <form action="ajoutProfesseur" method="post">\n                <div class="modal-header">\n                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span\n                            aria-hidden="true">&times;</span></button>\n                    <h4 class="modal-title">Ajout d\'un professeur</h4>\n                </div>\n                <div class="modal-body">\n                    <input type="text" name="prenom">\n                    <input type="text" name="nom">\n                    <input type="date" name="datenaissance">\n                </div>\n                <div class="modal-footer">\n                    <input type="submit" class="btn btn-primary" value="Valider">\n                </div>\n            </form>\n        </div>\n    </div>\n</div>\n')
+        __M_writer('                        </tbody>\n\n                    </table>\n                </div>\n            </div>\n        </div>\n        <div class="col-lg-3"></div>\n    </div>\n</div>\n<!-- Modal Ajout grade -->\n<div class="modal fade" id="addProfesseur" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">\n    <div class="modal-dialog" role="document">\n        <div class="modal-content">\n            <form action="ajoutProfesseur" method="post">\n                <div class="modal-header">\n                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span\n                            aria-hidden="true">&times;</span></button>\n                    <h4 class="modal-title">Ajout d\'un professeur</h4>\n                </div>\n                <div class="modal-body">\n                    <div class="input-group">\n                        <span class="input-group-addon">Nom</span>\n                        <input type="text" name="nom" class="form-control" placeholder="Nom" required>\n                    </div>\n                    <div class="input-group">\n                        <span class="input-group-addon">Prenom</span>\n                        <input type="text" name="prenom" class="form-control" placeholder="Prenom" required>\n                    </div>\n                    <div class="input-group">\n                        <span class="input-group-addon">Date Naissance</span>\n                        <input type="date" name="datenaissance" class="form-control" placeholder="YYYY-MM-DD" required>\n                    </div>\n                </div>\n                <div class="modal-footer">\n                    <input type="submit" class="btn btn-primary" value="Valider">\n                </div>\n            </form>\n        </div>\n    </div>\n</div>\n')
         return ''
     finally:
         context.caller_stack._pop_frame()
@@ -70,6 +70,6 @@ def render_container(context,**pageargs):
 
 """
 __M_BEGIN_METADATA
-{"source_encoding": "ascii", "line_map": {"64": 34, "65": 41, "35": 1, "71": 65, "45": 2, "27": 0, "52": 2, "53": 22, "54": 23, "55": 25, "56": 25, "57": 26, "58": 26, "59": 27, "60": 27, "61": 30, "62": 30, "63": 34}, "filename": "/home/antony/Documents/python/gestionKendo/web/views/templates/professeurs.mako.html", "uri": "professeurs.mako.html"}
+{"line_map": {"64": 34, "65": 41, "35": 1, "71": 65, "45": 2, "27": 0, "52": 2, "53": 22, "54": 23, "55": 25, "56": 25, "57": 26, "58": 26, "59": 27, "60": 27, "61": 30, "62": 30, "63": 34}, "source_encoding": "ascii", "uri": "professeurs.mako.html", "filename": "/home/antony/Documents/python/gestionKendo/web/views/templates/professeurs.mako.html"}
 __M_END_METADATA
 """

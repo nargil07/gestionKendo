@@ -34,10 +34,8 @@ class Adherent(Base):
                                                                                               self.prenom,
                                                                                               self.dateNaissance))
 
-
     def __repr__(self):
-        return (
-        "Adherent : [Licence : {}, nom : {}, prenom : {}, dateNaissance : {}]".format(self.licence, self.nom,
+        return ("Adherent : [Licence : {}, nom : {}, prenom : {}, dateNaissance : {}]".format(self.licence, self.nom,
                                                                                       self.prenom,
                                                                                       self.dateNaissance))
 

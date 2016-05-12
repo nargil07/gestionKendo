@@ -35,4 +35,10 @@ class ServiceAdherent():
         grade = self.gradeDAO.findById(id)
         self.gradeDAO.delete(grade)
 
+    def modifierProfesseur(self, nom, prenom, datenaissance):
+        self.adherent.nom = nom
+        self.adherent.prenom = prenom
+        self.adherent.dateNaissance = datenaissance
+        self.adherentDAO.update(self.adherent)
+
 
